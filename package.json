@@ -1,0 +1,41 @@
+{
+  "name": "hard_rockolo",
+  "version": "1.0.0",
+  "description": "Music festival website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jacopo Panzera",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/preset-env": "^7.8.4",
+    "@polymer/lit-element": "^0.7.1",
+    "@webcomponents/webcomponentsjs": "^2.4.2",
+    "axios": "^0.19.2",
+    "babel-loader": "^8.0.6",
+    "babel-preset-minify": "^0.5.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.2",
+    "core-js": "^3.6.4",
+    "css-loader": "^3.4.2",
+    "fractional": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "install": "^0.13.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "nanoid": "^2.1.11",
+    "node-sass": "^4.13.1",
+    "npm": "^6.14.1",
+    "pwa-helpers": "^0.9.1",
+    "redux": "^4.0.5",
+    "reselect": "^4.0.0",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
+  }
+}
