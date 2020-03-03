@@ -1,0 +1,65 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat:400,900|Raleway|Spartan&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+@import 'mixins';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body, input {
+    font-family: 'Spartan', sans-serif;
+    line-height: 1.4;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+main {
+    // padding-top: 80px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    outline: 0;
+
+    &:hover {
+        color: white;
+        text-decoration: none;
+    }
+
+    a:active, a:focus {
+        outline: 0;
+        border: none;
+        -moz-outline-style: none;
+    }
+}
+
+.navbar {
+    @include flex-center();
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    position: fixed;
+
+    width: 100%;
+    
+    padding: 15px 20px;
+
+    background: black;
+
+    &__nav {
+        display: flex;
+        flex-wrap: wrap;
+    }
+        &__btn {
+            // font-weight: 700;
+            font-size: 1.2rem;
+            padding: 15px 25px;
+            text-transform: uppercase;
+        }
+}
