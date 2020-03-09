@@ -2,7 +2,6 @@ import {BaseView} from './base-view.js';
 import {html} from '@polymer/lit-element';
 
 import './page-header-view';
-import './section-view';
 import './feed-view';
 
 class HomeView extends BaseView {
@@ -28,10 +27,53 @@ class HomeView extends BaseView {
         height="800">
       </page-header-view>
 
-      <section-view  class="section section--light"
-      title="News">
-        <feed-view></feed-view>
-      </section-view>
+      <div id="insta" class="section section--light" >
+        <div class="section__container">
+          <h1 class="section__title">Insta Feed</h1>
+
+          <div class="section__grid">
+            <feed-view 
+              img="asd"
+              title="Know your Drugs"
+              desc="I drug myself">
+            </feed-view>
+            <feed-view 
+              img="asd"
+              title="Know your Drugs"
+              desc="I drug myself">
+            </feed-view>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="headline" class="section">
+        <div class="section__container">
+          <h1 class="section__title">Headline</h1>
+          
+        </div>
+      </div>
+
+      <div id="merch" class="section section--light">
+        <div class="section__container">
+          <h1 class="section__title">Merch</h1>
+          
+        </div>
+      </div>
+      
+      <div id="maps" class="section">
+        <div class="section__container">
+          <h1 class="section__title">Find Us</h1>
+          
+        </div>
+      </div>
+
+      <div id="sponsor" class="section section--light">
+        <div class="section__container">
+          <h1 class="section__title">Sponsor</h1>
+          
+        </div>
+      </div>
     `;
   }
 }

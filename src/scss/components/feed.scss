@@ -1,0 +1,35 @@
+feed-view {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    padding: 20px;
+
+    border-radius: 10px;
+    height: 100%;
+    // width: 300px;
+
+    color: white;
+    
+    .feed {
+        &__title {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        &__text {
+
+        }
+
+        &__desc {
+
+        }
+
+        &__tag-container {
+
+        }
+
+            &__tag {
+                
+            }
+    }
+}

@@ -6,6 +6,9 @@
 @import 'mixins';
 @import 'variables';
 
+@import 'components/feed';
+@import 'components/home';
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -18,10 +21,6 @@ html, body, input {
     scroll-behavior: smooth;
     color: white;
     background: $dark-gray;
-}
-
-main {
-    // padding-top: 80px;
 }
 
 a {
@@ -105,33 +104,3 @@ a {
 
 }
 
-.section {
-    @include flex-center();
- 
-    width: 100%;
-
-    padding: 60px 20px;
-
-    &__container {
-        min-width: 80%;
-    }
-
-        &__title {
-            
-            font-family: 'Montserrat', sans-serif;
-            font-size: 4rem;
-            font-weight: 600;
-            text-align: left;
-            
-            text-transform: uppercase;
-            
-            line-height: 0.8;
-            letter-spacing: -0.2rem;
-        }
-
-    
-        &--light {
-            background: $light-gray;
-            color: $dark-gray;
-        }
-}
