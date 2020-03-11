@@ -24,7 +24,11 @@ class NewsView extends BaseView {
             
             <div class="news">
                 ${ this.img === '' ? html`` : html`
-                    <img class="news__img" src="./assets/img/news/${this.img}.jpg"/>
+                    <div class="news__img-wrap">
+                        <div class="news__img">
+                            <img src="./assets/img/news/${this.img}.jpg"/>
+                        </div>
+                    </div>
                 `} 
 
                 <h2 class="news__title">

@@ -34,8 +34,10 @@ class AboutView extends BaseView {
 
       <div class="section section--light">
         <div class="section__container">
-          <div class="about__img-container">
-            <img class="about__img" src="./assets/img/header/DSC_0003.jpg"/>
+          <div class="about__img-wrap">
+            <div class="about__img">
+              <img src="./assets/img/header/DSC_0003.jpg"/>
+            </div>
           </div>
           <div class="about__text">
             <h1 class="about__title">About Us</h1>
@@ -59,8 +61,10 @@ class AboutView extends BaseView {
             </p>
           </div>
 
-          <div class="about__img-container">
-            <img class="about__img" src="./assets/img/header/DSC_0003.jpg"/>
+          <div class="about__img-wrap">
+            <div class="about__img">
+              <img src="./assets/img/header/cadore-212.jpg"/>
+            </div>
           </div>
         </div>
       </div>
