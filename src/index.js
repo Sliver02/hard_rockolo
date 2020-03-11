@@ -15,11 +15,16 @@ function initRouter() {
             path: '/',
             component: 'home-view'
         },
-        // {
-        //     path: '/stats',
-        //     component: 'stats-view',
-        //     action: () => import(/* webpackChunkName: "stats" */ './views/stats-view')
-        // },
+        {
+            path: '/about',
+            component: 'about-view',
+            action: () => import(/* webpackChunkName: "about" */ './views/about-view')
+        },
+        {
+            path: '/merch',
+            component: 'merch-view',
+            action: () => import(/* webpackChunkName: "merch" */ './views/merch-view')
+        },
         {
             path: '(.*)',
             component: 'not-found-view',

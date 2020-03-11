@@ -1,0 +1,29 @@
+about-view {
+
+    .about {
+
+        &__img-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            overflow: hidden;
+            
+            width: 40%;
+            // height: 400px;
+        }
+            &__img {
+                position: absolute;
+                max-height: 100%;
+            }
+
+        &__text {
+            margin-left: 50px;
+            max-width: 50%;
+        }
+            &__desc {
+                // font-size: 0.9rem;
+            }
+    }
+}

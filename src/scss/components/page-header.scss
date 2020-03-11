@@ -1,0 +1,47 @@
+.header {
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items: center;
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+    text-align: center;
+    
+    &__vid, &__img {
+    
+        position: absolute;
+    
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 100%;
+    
+        opacity: 0.8;
+        // top: 0;
+    }
+    
+    &__text {
+        z-index: 2;
+        position: absolute;
+        top: 45%;
+    }
+        &__title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 6rem;
+            font-weight: 700;
+            
+            text-transform: uppercase;
+            
+            line-height: 0.8;
+            letter-spacing: -0.5rem;
+        }
+    
+        &__subtitle {
+            margin-top: 10px;
+            line-height: 2;
+            font-size: 1.2rem;
+            letter-spacing: 0.2rem;
+        }
+}
