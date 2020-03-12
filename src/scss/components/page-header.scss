@@ -6,8 +6,10 @@
     position: relative;
 
     width: 100%;
-
     overflow: hidden;
+
+    color: white;
+    background: $dark-gray;
     text-align: center;
     
     &__vid, &__img {

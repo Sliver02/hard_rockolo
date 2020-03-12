@@ -28,7 +28,7 @@ class HomeView extends BaseView {
         height="800">
       </page-header-view>
 
-      <div id="news" class="section section--light" >
+      <div id="news" class="section" >
         <div class="section__container">
           <h1 class="section__title">News</h1>
 
@@ -63,28 +63,28 @@ class HomeView extends BaseView {
         </div>
       </div>
 
-      <div id="headline" class="section">
+      <div id="headline" class="section section--dark">
         <div class="section__container">
           <h1 class="section__title">Line Up</h1>
           
         </div>
       </div>
 
-      <div id="merch" class="section section--light">
+      <div id="merch" class="section">
         <div class="section__container">
           <h1 class="section__title">Merch</h1>
           
         </div>
       </div>
       
-      <div id="maps" class="section">
+      <div id="maps" class="section section--dark">
         <div class="section__container">
           <h1 class="section__title">Find Us</h1>
           
         </div>
       </div>
 
-      <div id="sponsor" class="section section--light">
+      <div id="sponsor" class="section">
         <div class="section__container">
           <h1 class="section__title">Sponsor</h1>
           

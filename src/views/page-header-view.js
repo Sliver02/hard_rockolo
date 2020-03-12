@@ -64,6 +64,7 @@ class PageHeaderView extends BaseView {
 
     firstUpdated() {
         // this.parallaxEffect();
+
     }
 
     // parallaxEffect() {
@@ -82,6 +83,9 @@ class PageHeaderView extends BaseView {
 
     //     console.log('parallax');
     // }
+
+    
+
 }
 
 customElements.define('page-header-view', PageHeaderView);

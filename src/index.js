@@ -26,9 +26,20 @@ function initRouter() {
             action: () => import(/* webpackChunkName: "merch" */ './views/merch-view')
         },
         {
+            path: '/timeline',
+            component: 'timeline-view',
+            action: () => import(/* webpackChunkName: "timeline" */ './views/timeline-view')
+        },
+        {
             path: '(.*)',
             component: 'not-found-view',
             action: () => import(/* webpackChunkName: "not-found-view" */ './views/not-found-view')
         }
     ]);
 }
+
+function navFade() {
+    console.log('asd');
+}
+
+// window.addEventListener('scroll', navFade());
