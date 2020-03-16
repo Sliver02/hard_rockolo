@@ -31,7 +31,7 @@ class TimelineView extends BaseView {
         height="300">
       </page-header-view>
 
-      <div class="section section--dark">
+      <div class="section">
         <div class="timeline">
             <ul>
                 <li>

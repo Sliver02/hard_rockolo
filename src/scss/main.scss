@@ -62,7 +62,7 @@ h2 {
     // letter-spacing: -0.2rem;
 }
 
-.navbar {
+nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -76,10 +76,23 @@ h2 {
     padding: 20px 40px;
 
     // background: rgba(0, 0, 0, 0.5);
+    transition: background 1s ease-out;
+}
+
+.navbar {
+    &--dark {
+        background: rgba(31, 31, 31, 0.4);
+
+        .navbar__logo {
+            max-width: 120px;
+        }
+    }
 
     &__logo {
         max-width: 200px;
         position: relative;
+
+        transition: max-width 0.4s ease-out;
 
         img {
             width: 100%;
@@ -90,13 +103,14 @@ h2 {
     &__nav {
         display: flex;
         flex-wrap: wrap;
+        margin-left: auto;
     }
         &__btn {
             // font-weight: 700;
             display: flex;
             position: relative;
 
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             padding: 5px 10px;
             margin: 0 15px;
             text-transform: uppercase;

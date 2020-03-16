@@ -42,4 +42,9 @@ function navFade() {
     console.log('asd');
 }
 
-// window.addEventListener('scroll', navFade());
+window.onscroll = () => {
+    // console.log(window.pageYOffset); 
+    scrollY = window.pageYOffset;
+    const nav = document.querySelector('nav');
+    if(scrollY <= 200) nav.className = ''; else nav.className = 'navbar--dark';
+};
