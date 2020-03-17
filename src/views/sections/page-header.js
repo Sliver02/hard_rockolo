@@ -1,9 +1,9 @@
-import {BaseView} from './base-view.js';
+import {BaseView} from '../base-view.js';
 import {html} from '@polymer/lit-element';
 
 // import simpleParallax from 'simple-parallax-js';
 
-class PageHeaderView extends BaseView {
+class PageHeader extends BaseView {
 
     static get properties() {
         return {
@@ -88,4 +88,4 @@ class PageHeaderView extends BaseView {
 
 }
 
-customElements.define('page-header-view', PageHeaderView);
+customElements.define('page-header', PageHeader);

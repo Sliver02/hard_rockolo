@@ -1,7 +1,7 @@
 import {BaseView} from './base-view.js';
 import {html} from '@polymer/lit-element';
 
-import './page-header-view';
+import './sections/page-header';
 
 class AboutView extends BaseView {
 
@@ -27,10 +27,10 @@ class AboutView extends BaseView {
         }
       </style>
 
-      <page-header-view 
+      <page-header 
         img="DSC_0664"
         height="300">
-      </page-header-view>
+      </page-header>
 
       
       <div class="section">

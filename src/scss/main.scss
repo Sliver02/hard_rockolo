@@ -6,9 +6,10 @@
 @import 'mixins';
 @import 'variables';
 
+@import 'components/page-header';
 @import 'components/home';
     @import 'components/news';
-    @import 'components/page-header';
+    @import 'components/lineup';
 @import 'components/about';
 @import 'components/timeline';
 
@@ -72,27 +73,20 @@ nav {
 
     width: 100%;
     
-    z-index: 2;
+    z-index: 4;
     padding: 20px 40px;
 
     // background: rgba(0, 0, 0, 0.5);
-    transition: background 1s ease-out;
+    transition: background 0.4s ease-out;
 }
 
 .navbar {
-    &--dark {
-        background: rgba(31, 31, 31, 0.4);
-
-        .navbar__logo {
-            max-width: 120px;
-        }
-    }
 
     &__logo {
         max-width: 200px;
         position: relative;
 
-        transition: max-width 0.4s ease-out;
+        transition: max-width 0.2s ease-out;
 
         img {
             width: 100%;
@@ -134,6 +128,14 @@ nav {
                 }
             }
         }
+
+    &--dark {
+        background: rgba(31, 31, 31, 0.8);
+
+        .navbar__logo {
+            max-width: 120px;
+        }
+    }
 }
 
 .section {
@@ -163,4 +165,3 @@ nav {
 .footer {
 
 }
-

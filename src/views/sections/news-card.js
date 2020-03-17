@@ -1,7 +1,7 @@
-import {BaseView} from './base-view.js';
-import {html, css} from '@polymer/lit-element';
+import {BaseView} from '../base-view.js';
+import {html} from '@polymer/lit-element';
 
-class NewsView extends BaseView {
+class NewsCard extends BaseView {
 
     static get properties() {
         return {
@@ -44,4 +44,4 @@ class NewsView extends BaseView {
     }
 }
 
-customElements.define('news-view', NewsView);
+customElements.define('news-card', NewsCard);

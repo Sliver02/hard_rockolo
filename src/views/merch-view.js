@@ -1,7 +1,7 @@
 import {BaseView} from './base-view.js';
 import {html} from '@polymer/lit-element';
 
-import './page-header-view';
+import './sections/page-header';
 
 class MerchView extends BaseView {
 
@@ -18,10 +18,10 @@ class MerchView extends BaseView {
   
   render() {
     return html`
-      <page-header-view 
+      <page-header 
         img="DSC_0035"
         height="300">
-      </page-header-view>
+      </page-header>
 
     `;
   }
