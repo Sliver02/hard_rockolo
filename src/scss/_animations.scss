@@ -1,0 +1,13 @@
+//Spin Animation
+@-moz-keyframes load {
+    from { -moz-transform: scaleX(0); }
+    to { -moz-transform: scaleX(1); }
+}
+@-webkit-keyframes load {
+    from { -webkit-transform: scaleX(0); }
+    to { -webkit-transform: scaleX(1); }
+}
+@keyframes load {
+    from {transform: scaleX(0);}
+    to {transform: scaleX(1);}
+}
