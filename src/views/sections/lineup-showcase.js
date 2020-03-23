@@ -52,7 +52,7 @@ class LineupShowcase extends BaseView {
         ];
         this.days = [];
         this.bandIndex = 0;
-        this.nextTimer = 8;
+        this.nextTimer = 0;
         this.sliderPause = false;
         this.player = undefined;
     }
@@ -94,7 +94,6 @@ class LineupShowcase extends BaseView {
 
     firstUpdated() {
         this.loadPlayer();
-        this.startSlider();
     }
 
     updated() {
@@ -151,6 +150,7 @@ class LineupShowcase extends BaseView {
             firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
             
             window.onYouTubePlayerAPIReady = function() {
+                // element.startSlider();
                 element.onYouTubePlayer();
             };
         } else {
@@ -165,6 +165,7 @@ class LineupShowcase extends BaseView {
             videoId: this.lineup[this.bandIndex].url,
             playerVars: { controls:1, showinfo: 0, rel: 0, showsearch: 0, iv_load_policy: 3 },
             events: {
+            'onReady': (e) => this.startSlider(),
             'onStateChange': (e) => this.onPlayerStateChange(e),
             'onError': this.catchError,
             }
@@ -174,7 +175,7 @@ class LineupShowcase extends BaseView {
     onPlayerStateChange(event) {
         if (event.data == YT.PlayerState.PLAYING && !this.sliderPause) {
             // setTimeout(stopVideo, 6000);
-            console.log('play');
+            // console.log('play');
             this.sliderPause = true;
             this.stopSlider();
 
