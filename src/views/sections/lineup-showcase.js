@@ -96,12 +96,8 @@ class LineupShowcase extends BaseView {
         this.loadPlayer();
     }
 
-    updated() {
-
-    }
-
     startSlider() {
-        console.log('start slider');
+        // console.log('start slider');
         this.nextTimer = 8;
         this.sliderPause = false;
 
@@ -112,25 +108,25 @@ class LineupShowcase extends BaseView {
                 this.bandIndex += 1;
                 this.switchBand();
             } else {
+                // console.log('band reset');
                 this.bandIndex = 0;
                 this.switchBand();
-                // console.log('band reset');
             }
         }, this.nextTimer * 1000);
 
     }
 
     stopSlider(event) {
-        console.log('stop slider');
+        // console.log('stop slider');
         this.nextTimer = 0;
         clearInterval(this.timer);
     }
 
     selectBand(selectedId) {
-
         if (!this.sliderPause){
             this.stopSlider();
         }
+        
         this.bandIndex = selectedId;
         this.switchBand();
     }
