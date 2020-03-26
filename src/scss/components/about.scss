@@ -1,10 +1,10 @@
 about-view {
-    $shared-width: 850px;
+    $shared-width: 300px;
 
     .section__container {
         // margin-bottom: 60px;
         flex-direction: column;
-        max-width: $shared-width;
+        max-width: 60%;
     }
 
     .about {
@@ -20,7 +20,9 @@ about-view {
         }
             &__img {
                 img {
-                    max-width: $shared-width;    
+                    // max-width: $shared-width;    
+                    width: 100%;
+                    min-width: 500px;    
                     min-height: 100%;
                 }
             }
