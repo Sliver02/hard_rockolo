@@ -5,6 +5,7 @@ import './sections/page-header';
 import './sections/news-card';
 import './sections/lineup-showcase';
 import './sections/custom-map';
+import './sections/contact-form';
 
 class HomeView extends BaseView {
 
@@ -91,6 +92,14 @@ class HomeView extends BaseView {
         <div class="section__container">
           <h1 class="section__title">Sponsor</h1>
           
+        </div>
+      </div>
+
+      <div id="maps" class="section section--dark">
+        <div class="section__container">
+          <h1 class="section__title">Contact us</h1>
+          
+          <contact-form></contact-form>
         </div>
       </div>
     `;

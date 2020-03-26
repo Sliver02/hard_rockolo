@@ -1,0 +1,83 @@
+contact-form {
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        min-width: 60%;
+        // max-width: 800px;
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+
+        }
+
+        input[type="text"], textarea[type="text"]{
+            // font-family: 'Roboto Mono', monospace;
+            font-size:16px;
+        }
+
+        input, textarea {
+            background: none;
+            border: none;
+            padding: 0.8rem 1.6rem;
+            color: $dark-gray;
+
+            background: $light-gray;
+
+            width: 100%;
+        }
+
+        &__header {
+            margin-bottom: 2rem;
+
+            h1 {
+                // font-family: 'Space Mono', monospace;
+                margin-bottom: 1rem;
+                font-size: 3rem;
+            }
+        }
+
+        &__desc {
+        }
+
+        &__form {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(5, auto);
+            grid-gap: 18px;
+
+            width: 100%;
+        }   
+
+        &__name {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        &__email {
+
+        }
+
+        &__phone {
+
+        }
+
+        &__subject {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        &__message {
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+            textarea {
+                min-height: 25vh;
+            }
+        }
+    }
+}
