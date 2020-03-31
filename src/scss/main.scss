@@ -89,7 +89,7 @@ nav {
 
     width: 100%;
     
-    z-index: 4;
+    z-index: 10;
     padding: 20px 40px;
 
     // background: rgba(0, 0, 0, 0.5);
@@ -189,17 +189,31 @@ nav {
     &__container {
         width: 80%;
     }
-        &__grid {
+        &--dark {
+            background: $dark-gray;
+            color: $light-gray;
+        }
+        &__news {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             // grid-auto-rows: 300px;
             grid-gap: 1rem;
         }
+        &__merch {
+            display: flex;
+            flex-direction: wrap;
 
-        &--dark {
-            background: $dark-gray;
-            color: $light-gray;
+            .section__text {
+
+                padding-left: 60px;
+                max-width: 550px;
+
+                a {
+                    color: $dark-terracotta;
+                }
+            }
         }
+        
 }
 
 .footer {

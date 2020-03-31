@@ -1,7 +1,7 @@
 import {BaseView} from './base-view.js';
 import {html} from '@polymer/lit-element';
 
-import './sections/page-header';
+import './components/page-header';
 
 class AboutView extends BaseView {
 

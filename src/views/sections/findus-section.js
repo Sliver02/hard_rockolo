@@ -2,7 +2,7 @@ import {BaseView} from '../base-view.js';
 import {html} from '@polymer/lit-element';
 import mapboxgl from 'mapbox-gl';
 
-class CustomMap extends BaseView {
+class FiundusSection extends BaseView {
 
     static get properties() {
         return {
@@ -196,4 +196,4 @@ class CustomMap extends BaseView {
     }
 }
 
-customElements.define('custom-map', CustomMap);
+customElements.define('findus-section', FiundusSection);

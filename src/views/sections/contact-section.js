@@ -1,7 +1,7 @@
 import {BaseView} from '../base-view.js';
 import {html} from '@polymer/lit-element';
 
-class ContactForm extends BaseView {
+class ContactSection extends BaseView {
 
     static get properties() {
         return {
@@ -82,4 +82,4 @@ class ContactForm extends BaseView {
     // }
 }
 
-customElements.define('contact-form', ContactForm);
+customElements.define('contact-section', ContactSection);

@@ -1,7 +1,7 @@
 import {BaseView} from '../base-view.js';
 import {html} from '@polymer/lit-element';
 
-class LineupShowcase extends BaseView {
+class LineupSection extends BaseView {
 
     static get properties() {
         return {
@@ -68,17 +68,21 @@ class LineupShowcase extends BaseView {
                     animation:         load ${this.nextTimer}s linear; /* IE 10+, Fx 29+ */
                 }
             </style>
+
+            <div class="lineup__bands">
+                <h1 class="section__title">Line Up</h1>
             
-            <ul class="lineup__names">
-                ${this.lineup.map((band, index, arr) => html `
-                    <li class="lineup__tag 
-                            ${this.bandIndex === index ? 'is-active' : ''} 
-                            ${this.bandIndex +1 === index || this.bandIndex +1 === arr.length && index === 0 ? 'is-next' : ''}" 
-                            @click="${(e) => this.selectBand(index)}">
-                            ${band.name}
-                    </li>
-                `)}
-            </ul>
+                <ul class="lineup__tag-list">
+                    ${this.lineup.map((band, index, arr) => html `
+                        <li class="lineup__tag 
+                                ${this.bandIndex === index ? 'is-active' : ''} 
+                                ${this.bandIndex +1 === index || this.bandIndex +1 === arr.length && index === 0 ? 'is-next' : ''}" 
+                                @click="${(e) => this.selectBand(index)}">
+                                ${band.name}
+                        </li>
+                    `)}
+                </ul>
+            </div>
 
             <div class="lineup__content">
                 <!-- <iframe class="lineup__video" 
@@ -186,4 +190,4 @@ class LineupShowcase extends BaseView {
     }
 }
 
-customElements.define('lineup-showcase', LineupShowcase);
+customElements.define('lineup-section', LineupSection);

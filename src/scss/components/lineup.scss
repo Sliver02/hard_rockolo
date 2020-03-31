@@ -1,57 +1,59 @@
-lineup-showcase {
+lineup-section {
     display: flex;
     justify-content: space-between;
 
     .lineup {
-        &__names {
-            display: flex;
-            flex-wrap: wrap;
-            
+
+        &__bands {
             width: 50%;
             height: max-content;
-
-            font-size: 1.2rem;
         }
-            &__tag {
+            &__tag-list {
                 display: flex;
-                position: relative;
-
-                padding: 10px 15px;
-                margin: 0.4rem;
-                background: rgba($color: #fff, $alpha: 0.1);
-                // transition: background 0.3s;
-                overflow: hidden;
+                flex-wrap: wrap;
                 
-                border-radius: 0.2rem;
-                cursor: pointer;
+                font-size: 1.2rem;
+            }
+                &__tag {
+                    display: flex;
+                    position: relative;
 
-                &:hover {
-                    background: rgba($color: #fff, $alpha: 0.2);
-                }
+                    padding: 10px 15px;
+                    margin: 0.4rem;
+                    background: rgba($color: #fff, $alpha: 0.1);
+                    // transition: background 0.3s;
+                    overflow: hidden;
+                    
+                    border-radius: 0.2rem;
+                    cursor: pointer;
 
-                &.is-active {
-                    background: rgba($color: $dark-terracotta, $alpha: 0.5);
-                    // font-weight: 600;
-                    // transform: scale(1.05);
-                    // margin: 0.4rem 1rem;
-                }
-
-                &.is-next {
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-    
-                        width: 100%;
-                        height: 100%;
-                        transform: scaleX(0);
-                        transform-origin: 0 0;
+                    &:hover {
                         background: rgba($color: #fff, $alpha: 0.2);
-                        // transition: transform 5s;
+                    }
+
+                    &.is-active {
+                        background: rgba($color: $dark-terracotta, $alpha: 0.5);
+                        // font-weight: 600;
+                        // transform: scale(1.05);
+                        // margin: 0.4rem 1rem;
+                    }
+
+                    &.is-next {
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+        
+                            width: 100%;
+                            height: 100%;
+                            transform: scaleX(0);
+                            transform-origin: 0 0;
+                            background: rgba($color: #fff, $alpha: 0.2);
+                            // transition: transform 5s;
+                        }
                     }
                 }
-            }
 
         &__content {
             display: flex;
@@ -66,6 +68,7 @@ lineup-showcase {
                 left: 0;
                 width: 100%;
                 height: 100%;
+                background: black;
             }
 
             &__social {

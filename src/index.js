@@ -38,10 +38,6 @@ function initRouter() {
     ]);
 }
 
-function navFade() {
-    console.log('asd');
-}
-
 window.onscroll = () => {
     // console.log(window.pageYOffset); 
     scrollY = window.pageYOffset;
