@@ -1,6 +1,6 @@
 //Spin Animation
 @-moz-keyframes load {
-    from { -moz-transform: scaleX(0); }
+    from { -moz-transform: scaleX(100%); }
     to { -moz-transform: scaleX(1); }
 }
 @-webkit-keyframes load {
@@ -10,4 +10,45 @@
 @keyframes load {
     from {transform: scaleX(0);}
     to {transform: scaleX(1);}
+}
+
+/* //Spin Animation
+@-moz-keyframes slide-diagonal {
+    from { -moz-transform: rotate(45grad) translate(100%); }
+    to { -moz-transform: rotate(45grad) translate(0); }
+}
+@-webkit-keyframes slide-diagonal {
+    from { -webkit-transform: rotate(45grad) translate(100%); }
+    to { -webkit-transform: rotate(45grad) translate(0); }
+}
+@keyframes slide-diagonal {
+    from {transform: rotate(45grad) translate(100%);}
+    to {transform: rotate(45grad) translate(0);}
+} */
+
+//Spin Animation
+@-moz-keyframes slide-left {
+    from { -moz-transform: translate(100%); }
+    to { -moz-transform: translate(0); }
+}
+@-webkit-keyframes slide-left {
+    from { -webkit-transform: translate(100%); }
+    to { -webkit-transform: translate(0); }
+}
+@keyframes slide-left {
+    from {transform: translate(100%);}
+    to {transform: translate(0);}
+}
+
+@-moz-keyframes slide-right {
+    from { -moz-transform: translate(-100%); }
+    to { -moz-transform: translate(0); }
+}
+@-webkit-keyframes slide-right {
+    from { -webkit-transform: translate(-100%); }
+    to { -webkit-transform: translate(0); }
+}
+@keyframes slide-right {
+    from {transform: translate(-100%);}
+    to {transform: translate(0);}
 }

@@ -11,6 +11,7 @@
 @import 'components/home';
     @import 'components/news';
     @import 'components/lineup';
+    @import 'components/slider';
     @import 'components/map';
     @import 'components/contact';
 @import 'components/about';
@@ -183,6 +184,7 @@ nav {
     width: 100%;
 
     padding: 60px 20px;
+    padding-bottom: 100px;
 
     &__container {
         width: 80%;
@@ -205,6 +207,7 @@ nav {
     color: white;
 
     padding: 80px 0;
+    // margin-top: 80px;
 
     background: darken($dark-gray, 4%);
 
@@ -221,6 +224,9 @@ nav {
 
         &__social {
             font-size: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
     
             i {
                 margin: 0 2px;

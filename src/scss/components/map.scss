@@ -36,13 +36,13 @@ custom-map {
         display: block;
         // position: relative;
         border-radius: 50%;
-        box-shadow: 0 0 0 8px $dark-terracotta-t;
+        box-shadow: 0 0 0 8px  rgba($color: $dark-terracotta, $alpha: 0.4);
         transition: box-shadow 0.5s;
         background: $dark-terracotta no-repeat center center/cover;
 
         &:hover {
             // transform: scale(1.5);
-            box-shadow: 0 0 0 10px $dark-terracotta-t;
+            box-shadow: 0 0 0 10px rgba($color: $dark-terracotta, $alpha: 0.4);
             cursor: pointer;
         }
 

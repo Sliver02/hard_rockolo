@@ -32,7 +32,7 @@
             &:hover {
                 &::before {
                     transform: scale(1.5);
-                    box-shadow: 0 0 0 6px $dark-terracotta-t;
+                    box-shadow: 0 0 0 6px rgba($color: $dark-terracotta, $alpha: 0.4);
                 }
             }
 
@@ -46,7 +46,7 @@
                 height: $radious;
                 border-radius: 50%;
                 background: $dark-terracotta;
-                box-shadow: 0 0 0 8px $dark-terracotta-t;
+                box-shadow: 0 0 0 8px rgba($color: $dark-terracotta, $alpha: 0.4);
                 transition: transform 0.5s, box-shadow 0.5s;
             }
 

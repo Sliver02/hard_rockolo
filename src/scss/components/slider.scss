@@ -1,0 +1,148 @@
+merch-slider {
+    @include flex-center();
+    flex-direction: column;
+    position: relative;
+    // max-width: 50%;
+    width: 800px;
+
+    .slider {
+        @include flex-center();
+        position: relative;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+
+        &__btn {
+            @include flex-center();
+
+            cursor: pointer;
+            position: absolute;
+            width: 10%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.3s, color 0.2s;
+
+            font-size: 4rem;
+            color: white;
+
+            z-index: 4;
+
+            i {
+                opacity: 0.6;
+            }
+            
+            &--right {
+                right: 0;
+                background: linear-gradient(to right, rgba(0,0,0,0), rgba($color: $dark-gray, $alpha: 0.1));
+            }
+
+            &--left {
+                background: linear-gradient(to left, rgba(0,0,0,0), rgba($color: $dark-gray, $alpha: 0.1));
+                left: 0;
+            }
+
+            &:hover {
+                // transform: scale(1.2);
+                opacity: 1;
+            }
+
+            &:active {
+                color: $dark-terracotta;
+            }
+        }
+
+        &__point-wrap {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 0.5rem;
+
+            width: 60%;
+            padding: 10px 0;
+        }
+            &__point {
+                cursor: pointer;
+                position: relative;
+                width: 100%;
+                height: 30px;
+                // margin: 0.4rem;
+                background: rgba($color: $dark-gray, $alpha: 0.2);
+                // transition: background 0.3s;
+                overflow: hidden;
+                
+                border-radius: 0.2rem;
+
+                transition: transform 0.3s;
+                z-index: 4;
+
+                &:hover {
+                    background: rgba($color: $dark-gray, $alpha: 0.3);
+                }
+
+                &.is-active {
+                    background: $dark-terracotta;
+                }
+
+                &.is-next {
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+    
+                        width: 100%;
+                        height: 100%;
+                        transform: scaleX(0);
+                        transform-origin: 0 0;
+                        background: rgba($color: $dark-gray, $alpha: 0.1);
+                        // transition: transform 5s;
+                    }
+                }
+            }
+
+        &__slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            // transform: rotate(45grad);
+            overflow: hidden;
+
+            z-index: 1;
+
+            transition: transform 1s;
+            // transform: rotate(45grad) translate(0);
+
+           &.is-prev {
+                z-index: 2;
+                // transition: transform 0s;
+                // transform: rotate(45grad) translate(0); 
+            }
+
+            &.is-active {
+                z-index: 3;
+            }
+        }
+            &__img-wrap {
+                // transform: rotate(-45grad);
+                transition: transform 1s;
+
+                @include flex-center();
+                // position: relative;
+
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+
+            &__img {
+                position: absolute;
+                // top: 0;
+                // left: 0;
+                width: 100%;
+                // height: 100%;
+
+                max-width: 100%;
+                min-height: 100%;
+
+            }
+    }
+}

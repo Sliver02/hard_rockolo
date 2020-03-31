@@ -4,7 +4,7 @@ contact-form {
         flex-direction: column;
         justify-content: center;
 
-        min-width: 60%;
+        max-width: 80%;
         // max-width: 800px;
         
         label {
@@ -21,9 +21,11 @@ contact-form {
         }
 
         input, textarea {
+            font-family: 'Spartan', sans-serif;
             background: none;
             border: none;
-            padding: 0.8rem 1.6rem;
+            font-size: 1rem;
+            padding: 0.5rem 0.8rem;
             color: $dark-gray;
 
             background: $light-gray;
@@ -48,7 +50,7 @@ contact-form {
             display: grid;
             grid-template-columns: repeat(2, auto);
             grid-template-rows: repeat(5, auto);
-            grid-gap: 18px;
+            grid-gap: 1.5rem;
 
             width: 100%;
         }   

@@ -4,6 +4,7 @@ import {html} from '@polymer/lit-element';
 import './sections/page-header';
 import './sections/news-card';
 import './sections/lineup-showcase';
+import './sections/merch-slider';
 import './sections/custom-map';
 import './sections/contact-form';
 
@@ -76,7 +77,7 @@ class HomeView extends BaseView {
       <div id="merch" class="section">
         <div class="section__container">
           <h1 class="section__title">Merch</h1>
-          
+          <merch-slider></merch-slider>
         </div>
       </div>
       

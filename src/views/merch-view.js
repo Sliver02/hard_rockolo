@@ -2,6 +2,7 @@ import {BaseView} from './base-view.js';
 import {html} from '@polymer/lit-element';
 
 import './sections/page-header';
+import './sections/merch-slider';
 
 class MerchView extends BaseView {
 
@@ -23,6 +24,7 @@ class MerchView extends BaseView {
         height="300">
       </page-header>
 
+      <merch-slider></merch-slider>
     `;
   }
 }
