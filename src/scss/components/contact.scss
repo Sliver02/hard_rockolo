@@ -12,7 +12,7 @@ contact-section {
             margin-bottom: 5px;
             font-size: 1.1rem;
             text-transform: uppercase;
-
+            color: rgba($color: $dark-gray, $alpha: 0.5);
         }
 
         input[type="text"], textarea[type="text"]{
@@ -28,7 +28,9 @@ contact-section {
             padding: 0.5rem 0.8rem;
             color: $dark-gray;
 
-            background: $light-gray;
+            // background: $light-gray;
+            background: rgba($color: $dark-gray, $alpha: 0.05);
+            // border: 1px solid $dark-gray;
 
             width: 100%;
         }
@@ -79,6 +81,12 @@ contact-section {
 
             textarea {
                 min-height: 25vh;
+            }
+        }
+
+        .btn {
+            &:hover {
+                background: rgba($color: $dark-gray, $alpha: 0.1);
             }
         }
     }

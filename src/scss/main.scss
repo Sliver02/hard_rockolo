@@ -32,6 +32,10 @@ html, body, input {
     color: $dark-gray;
 }
 
+main {
+    min-height: 100vh;
+}
+
 a {
     color: white;
     text-decoration: none;
@@ -201,7 +205,7 @@ nav {
         }
         &__merch {
             display: flex;
-            flex-direction: wrap;
+            flex-wrap: wrap;
 
             .section__text {
 
@@ -260,3 +264,5 @@ nav {
             }
         }
 }
+
+@import 'mobile';

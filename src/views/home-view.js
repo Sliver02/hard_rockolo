@@ -58,14 +58,14 @@ class HomeView extends BaseView {
         </div>
       </div>
 
-      <div id="sponsor" class="section">
+      <!-- <div id="sponsor" class="section">
         <div class="section__container">
           <h1 class="section__title">Sponsor</h1>
           <sponsor-section></sponsor-section>
         </div>
-      </div>
+      </div> -->
 
-      <div id="maps" class="section section--dark">
+      <div id="maps" class="section">
         <div class="section__container">
           <h1 class="section__title">Contact us</h1>
           <contact-section></contact-section>
