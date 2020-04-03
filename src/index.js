@@ -36,6 +36,8 @@ function initRouter() {
             action: () => import(/* webpackChunkName: "not-found-view" */ './views/not-found-view')
         }
     ]);
+
+    console.log("router init");
 }
 
 window.onscroll = () => {

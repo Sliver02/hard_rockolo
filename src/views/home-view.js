@@ -73,6 +73,10 @@ class HomeView extends BaseView {
       </div>
     `;
   }
+
+  firstUpdated() {
+    window.scrollTo(0, 0);
+  }
 }
 
 customElements.define('home-view', HomeView);

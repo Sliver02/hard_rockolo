@@ -68,6 +68,10 @@ class AboutView extends BaseView {
 
     `;
   }
+
+  firstUpdated() {
+    window.scrollTo(0, 0);
+  }
 }
 
 customElements.define('about-view', AboutView);

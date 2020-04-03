@@ -175,7 +175,7 @@ class FiundusSection extends BaseView {
             let latitude = feature.geometry.coordinates[0] * Math.PI / 180;
             let longitude = feature.geometry.coordinates[1] * Math.PI / 180;
 
-            console.log(latitude);
+            // console.log(latitude);
 
             x += Math.cos(latitude) * Math.cos(longitude);
             y += Math.cos(latitude) * Math.sin(longitude);

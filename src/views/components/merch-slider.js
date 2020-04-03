@@ -139,7 +139,7 @@ class MerchSlider extends BaseView {
     }
 
     prevSlide() {
-        console.log('prev');
+        // console.log('prev');
         if (this.imgIndex > 0) {
             this.updatePrev();
             this.imgIndex -= 1;
@@ -150,7 +150,7 @@ class MerchSlider extends BaseView {
     }
 
     nextSlide() {
-        console.log('next');
+        // console.log('next');
         if (this.imgIndex < this.imgTotal) {
             this.updatePrev();
             this.imgIndex += 1;

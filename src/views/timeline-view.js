@@ -80,6 +80,10 @@ class TimelineView extends BaseView {
 
     `;
   }
+
+  firstUpdated() {
+    window.scrollTo(0, 0);
+  }
 }
 
 customElements.define('timeline-view', TimelineView);
