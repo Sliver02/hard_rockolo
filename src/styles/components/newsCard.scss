@@ -1,4 +1,6 @@
-news-card {
+@import '../main';
+
+:host {
     display: flex;
     flex-direction: column;
     

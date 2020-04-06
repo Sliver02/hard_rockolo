@@ -1,5 +1,4 @@
-import {BaseView} from './base-view.js';
-import {html} from '@polymer/lit-element';
+import { LitElement, html, css } from 'lit-element/';
 
 import './components/page-header';
 import './sections/news-section';
@@ -7,10 +6,16 @@ import './sections/news-section';
 import './sections/lineup-section';
 import './sections/merch-section';
   import './components/merch-slider';
-import './sections/findus-section';
+import './sections/map-section';
 import './sections/contact-section';
 
-class HomeView extends BaseView {
+import home from "../styles/components/home.scss";
+
+class HomeView extends LitElement {
+
+  static get styles() {
+		return css([home]);
+	}
 
   static get properties() {
     return {
@@ -54,7 +59,7 @@ class HomeView extends BaseView {
       <div id="maps" class="section section--dark">
         <div class="section__container">
           <h1 class="section__title">Find Us</h1>
-          <findus-section></findus-section>
+          <map-section></map-section>
         </div>
       </div>
 

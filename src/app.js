@@ -1,8 +1,12 @@
-import './scss/main.scss';
+import './styles/main.scss';
+import Navbar from './views/navbar-view';
+import Footer from './views/footer-view';
 import './views/home-view';
 import {Router} from '@vaadin/router';
 
 window.addEventListener('load', () => {
+    Navbar();
+    Footer();
     initRouter();
     // registerSW();
 });
@@ -39,10 +43,3 @@ function initRouter() {
 
     console.log("router init");
 }
-
-window.onscroll = () => {
-    // console.log(window.pageYOffset); 
-    scrollY = window.pageYOffset;
-    const nav = document.querySelector('nav');
-    if(scrollY <= 200) nav.className = ''; else nav.className = 'navbar--dark';
-};

@@ -1,73 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Hard Rockolo Music festival</title>
-
-    <!-- <link rel="icon" type="image/png" href="./img/icons/favicon.png" /> -->
-
-    <meta name="theme-color" content="#2A3443" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
     <meta name="description" content="Hard Rockolo Music festival || La musica che ami nel cuore delle Dolomiti" />
+    <meta name="theme-color" content="#db5461" />
 
-    <script>
-      if (!window.customElements) {
-        document.write('<!--');
-      }
-    </script>
-
-  <!-- <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script> -->
-  <link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet" />
-
-    <script src="./vendor/custom-elements-es5-adapter.js"></script>
-    <!-- ! DO NOT REMOVE THIS COMMENT, WE NEED ITS CLOSING MARKER -->
-  </head>
-
-  <body>
-
-    <nav class="navbar">
-      <div class="navbar__logo">
-        <a href="/">
-          <img src="./assets/img/logo.png" alt="">
-        </a>
-      </div>
-
-      <div class="navbar__nav">
-        <a class="navbar__btn" href="/">Home</a>
-        <a class="navbar__btn" href="/about">About</a>
-        <!-- <a class="navbar__btn" href="/merch">Merch</a> -->
-        <a class="navbar__btn" href="/timeline">Timeline</a>
-      </div>
-    </nav>
-
-    <main>
-      <!-- Let the router populate -->
-      <!-- <todo-view></todo-view> -->
-    </main>
-
-    <footer class="footer">
-      <div class="footer__container">
-        <div class="footer__info">
-          <ul>
-            <li>Pieve di Cadore, 32044, BL</li>
-            <li>Localita' Parco Roccolo</li>
-            <li>hardrockolofestival@gmail.com</li>
-          </ul>
-          <div class="footer__social">
-            <div class="footer__social__title">Follow Us</div>
-            <div>
-              <a href="https://www.facebook.com/HardRockolo/" target="_blank"><i class="fab fa-facebook-square"></i></a>
-              <a href="https://www.instagram.com/hardrockolo/" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
-          </div>
-        </div>
-        <hr>
-        <span>Copyright© 2020 - Jacopo Panzera - <a href="https://jacpan-portfolio.netlify.com/">jac.pan</a></span>
-      </div>
-    </footer>
+    <title>Hard Rockolo</title>
 
     <script src="./vendor/webcomponents-loader.js"></script>
+    <script src="./vendor/custom-elements-es5-adapter.js"></script>
+    <script src="./vendor/fetch.js"></script>
+    <script src="./vendor/polyfill.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 
+  </head>
+  <body>
+
+    <navbar-view></navbar-view>
+
+    <main></main>
+
+    <footer-view></footer-view>
+    
   </body>
 </html>

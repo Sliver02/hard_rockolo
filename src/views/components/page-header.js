@@ -1,9 +1,14 @@
-import {BaseView} from '../base-view.js';
-import {html} from '@polymer/lit-element';
+import { LitElement, html, css } from 'lit-element/';
+
+import style from "../../styles/components/header.scss";
 
 // import simpleParallax from 'simple-parallax-js';
 
-class PageHeader extends BaseView {
+class PageHeader extends LitElement {
+
+    static get styles() {
+		return css([style]);
+	}
 
     static get properties() {
         return {

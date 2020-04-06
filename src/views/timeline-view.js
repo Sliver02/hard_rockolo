@@ -1,9 +1,13 @@
-import {BaseView} from './base-view.js';
-import {html} from '@polymer/lit-element';
+import { LitElement, html, css } from 'lit-element/';
 
 import './components/page-header';
+import style from "../styles/components/timeline.scss";
 
-class TimelineView extends BaseView {
+class TimelineView extends LitElement {
+
+  static get styles() {
+		return css([style]);
+	}
 
   static get properties() {
     return {

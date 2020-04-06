@@ -1,7 +1,12 @@
-import {BaseView} from '../base-view.js';
-import {html} from '@polymer/lit-element';
+import { LitElement, html, css } from 'lit-element/';
 
-class LineupSection extends BaseView {
+import style from "../../styles/components/lineup.scss";
+
+class LineupSection extends LitElement {
+
+    static get styles() {
+		return css([style]);
+	}
 
     static get properties() {
         return {
@@ -141,7 +146,9 @@ class LineupSection extends BaseView {
     }
 
     loadPlayer() { 
+        // this.onYouTubePlayer();
         var element = this;
+
         if (typeof(YT) == 'undefined' || typeof(YT.Player) == 'undefined') {
       
             var tag = document.createElement('script');
@@ -159,7 +166,7 @@ class LineupSection extends BaseView {
     }
 
     onYouTubePlayer() {
-        this.player = new YT.Player('player', {
+        this.player = new YT.Player(this.shadowRoot.querySelector('#player'), {
             height: '490',
             width: '880',
             videoId: this.lineup[this.bandIndex].url,
@@ -170,6 +177,7 @@ class LineupSection extends BaseView {
             'onError': this.catchError,
             }
         });
+
     }
 
     onPlayerStateChange(event) {

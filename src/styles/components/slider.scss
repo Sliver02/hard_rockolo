@@ -1,5 +1,6 @@
+@import '../main';
 
-merch-slider {
+:host {
     @include flex-center();
     flex-direction: column;
     position: relative;

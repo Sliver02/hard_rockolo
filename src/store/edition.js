@@ -1,13 +1,4 @@
-import { 
-
-} from "./actions.js";
-import { createSelector } from "reselect";
-
-export const VisibilityFilters = {
-
-};
-
-const initial_state = {
+export default {
     editions: [
         {
             year: `2019`,
@@ -98,28 +89,4 @@ const initial_state = {
             ],
         }
     ],
-    news: [
-        {
-            title: ``,
-            article: ``,
-            link: ``,
-            cover: ``,
-        },
-    ],
-    sponsor: [
-        {
-            name: ``,
-            tier: ``,
-            urlWebsite: ``,
-            logo: ``,
-        }
-    ]
-};
-
-export const reducer = (state = initial_state, action) => {
-    switch(action.type) {
-        
-        default:
-            return state;
-    }
 };

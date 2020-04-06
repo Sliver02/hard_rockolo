@@ -1,11 +1,14 @@
-findus-section {
+@import '../main';
+@import url('https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css');
+
+:host {
     overflow: hidden;
     display: flex;
     flex-direction: column;
 
     .map {
         height: 600px;
-        position: relative;
+        // position: relative;
 
         &__info {
             display: flex;

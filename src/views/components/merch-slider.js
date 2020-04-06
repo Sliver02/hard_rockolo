@@ -1,7 +1,12 @@
-import {BaseView} from '../base-view.js';
-import {html} from '@polymer/lit-element';
+import { LitElement, html, css } from 'lit-element/';
 
-class MerchSlider extends BaseView {
+import style from "../../styles/components/slider.scss";
+
+class MerchSlider extends LitElement {
+
+    static get styles() {
+		return css([style]);
+	}
 
     static get properties() {
         return {

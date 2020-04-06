@@ -1,7 +1,12 @@
-import {BaseView} from '../base-view.js';
-import {html} from '@polymer/lit-element';
+import { LitElement, html, css } from 'lit-element/';
 
-class ContactSection extends BaseView {
+import style from "../../styles/components/contact.scss";
+
+class ContactSection extends LitElement {
+
+    static get styles() {
+		return css([style]);
+	}
 
     static get properties() {
         return {

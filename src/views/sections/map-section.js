@@ -1,8 +1,13 @@
-import {BaseView} from '../base-view.js';
-import {html} from '@polymer/lit-element';
+import { LitElement, html, css } from 'lit-element/';
 import mapboxgl from 'mapbox-gl';
 
-class FiundusSection extends BaseView {
+import style from "../../styles/components/map.scss";
+
+class MapSection extends LitElement {
+
+    static get styles() {
+		return css([style]);
+	}
 
     static get properties() {
         return {
@@ -85,7 +90,7 @@ class FiundusSection extends BaseView {
         const mapCenter = this.averageGeolocation(this.geojson.features);
 
         this.map = new mapboxgl.Map({
-            container: 'map',
+            container: this.shadowRoot.querySelector('#map'),
             center: mapCenter,
             zoom: 15,
             minZoom: 5,
@@ -162,7 +167,6 @@ class FiundusSection extends BaseView {
 
     averageGeolocation(features) {
 
-
         if (features.length === 1) {
             return features[0];
         }
@@ -196,4 +200,4 @@ class FiundusSection extends BaseView {
     }
 }
 
-customElements.define('findus-section', FiundusSection);
+customElements.define('map-section', MapSection);

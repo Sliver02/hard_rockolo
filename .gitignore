@@ -1,4 +1,8 @@
 node_modules
-dist
-.cache
-.vs
+dist/
+.babelrc
+.eslintrc.json
+.vs/
+karma*
+package-lock*
+test/

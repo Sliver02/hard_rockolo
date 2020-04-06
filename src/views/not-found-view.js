@@ -1,7 +1,13 @@
-import {BaseView} from './base-view.js';
-import {html} from '@polymer/lit-element';
+import { LitElement, html, css } from 'lit-element/';
 
-class NotFoundView extends BaseView {
+import style from "../styles/main.scss";
+
+class NotFoundView extends LitElement {
+
+  static get styles() {
+		return css([style]);
+  }
+  
   render() {
     return html`
       <style>
