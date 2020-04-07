@@ -1,5 +1,7 @@
 import { LitElement, html, css } from 'lit-element/';
 
+import style from "../styles/components/home.scss";
+
 import './components/page-header';
 import './sections/news-section';
   import './components/news-card';
@@ -9,17 +11,14 @@ import './sections/merch-section';
 import './sections/map-section';
 import './sections/contact-section';
 
-import home from "../styles/components/home.scss";
-
 class HomeView extends LitElement {
 
   static get styles() {
-		return css([home]);
+		return css([style]);
 	}
 
   static get properties() {
     return {
-
     };
   }
 
@@ -81,6 +80,9 @@ class HomeView extends LitElement {
 
   firstUpdated() {
     window.scrollTo(0, 0);
+		// this.initApp();
+
+    // console.log(this.edition);
   }
 }
 

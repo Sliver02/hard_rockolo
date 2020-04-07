@@ -1,5 +1,5 @@
 import types from "./types";
-import edition from "./edition";
+import editions from "./editions";
 import news from "./news";
 import sponsor from "./sponsor";
 
@@ -7,7 +7,7 @@ const INITIAL_STATE = {
     init: {
         appInit: false
     },
-    edition,
+    editions,
     news,
     sponsor,
 };

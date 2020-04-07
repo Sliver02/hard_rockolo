@@ -7,4 +7,4 @@ const changeInit = createAction(types.CHANGE_INIT);
 export default {
     initApp,
     changeInit
-}
+};

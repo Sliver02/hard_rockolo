@@ -1,5 +1,4 @@
-export default {
-    editions: [
+export default [
         {
             year: `2019`,
             stages: ['main', 'forte'],
@@ -73,20 +72,5 @@ export default {
                     day: 1,
                 },
             ],
-            merch: [
-                {
-                    product: `t-shirt`,
-                    name: `vojage`,
-                    desc: ``,
-                    imgs: [],
-                },
-                {
-                    product: `t-shirt`,
-                    name: `calm`,
-                    desc: ``,
-                    imgs: [],
-                },
-            ],
         }
-    ],
-};
+    ];

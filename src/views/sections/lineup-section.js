@@ -1,5 +1,9 @@
 import { LitElement, html, css } from 'lit-element/';
 
+import selectors from "../../store/selectors";
+import connect from "../../store/connect";
+import actions from "../../store/actions";
+
 import style from "../../styles/components/lineup.scss";
 
 class LineupSection extends LitElement {
@@ -10,51 +14,54 @@ class LineupSection extends LitElement {
 
     static get properties() {
         return {
-            lineup: {type: Array},
+            edition: {attribute: false},
+            year: {type: Number},
             days: {type: Array},
             bandIndex: {type: Number},
             nextTimer: {type: Number},
             player: {type: Object},
             done: {type: Boolean}
         };
-      }
+    }
     
     constructor() {
         super();
-        this.lineup = [
-            {
-                name: 'Fuoriology',
-                url: 'gJjew3vnZ6k'
-            },
-            {
-                name: 'Earth Beat Movement',
-                url: 'IaqKXbKAOeU'
-            },
-            {
-                name: 'Mole Moonwalktet',
-                url: 'JzCIUPWVTEI'
-            },
-            {
-                name: 'Gold Miners NightClub',
-                url: 'V15vRciah-s'
-            },
-            {
-                name: 'Dolomhate',
-                url: 'sw9OatbbsIU'
-            },
-            {
-                name: 'Elena Mazzon',
-                url: 'CmqaF7_X_P4'
-            },
-            {
-                name: 'Da Quagga',
-                url: 'Pi7kWRtcTCQ'
-            },
-            {
-                name: 'Untamed Sound System',
-                url: 'n0FGhAP_mCw'
-            }
-        ];
+        this.year = '2019',
+        // this.edition.lineup = this.edition.lineup;
+        // this.edition.lineup = [
+        //     {
+        //         name: 'Fuoriology',
+        //         url: 'gJjew3vnZ6k'
+        //     },
+        //     {
+        //         name: 'Earth Beat Movement',
+        //         url: 'IaqKXbKAOeU'
+        //     },
+        //     {
+        //         name: 'Mole Moonwalktet',
+        //         url: 'JzCIUPWVTEI'
+        //     },
+        //     {
+        //         name: 'Gold Miners NightClub',
+        //         url: 'V15vRciah-s'
+        //     },
+        //     {
+        //         name: 'Dolomhate',
+        //         url: 'sw9OatbbsIU'
+        //     },
+        //     {
+        //         name: 'Elena Mazzon',
+        //         url: 'CmqaF7_X_P4'
+        //     },
+        //     {
+        //         name: 'Da Quagga',
+        //         url: 'Pi7kWRtcTCQ'
+        //     },
+        //     {
+        //         name: 'Untamed Sound System',
+        //         url: 'n0FGhAP_mCw'
+        //     }
+        // ];
         this.days = [];
         this.bandIndex = 0;
         this.nextTimer = 0;
@@ -78,7 +85,7 @@ class LineupSection extends LitElement {
                 <h1 class="section__title">Line Up</h1>
             
                 <ul class="lineup__tag-list">
-                    ${this.lineup.map((band, index, arr) => html `
+                    ${this.edition.lineup.map((band, index, arr) => html `
                         <li class="lineup__tag 
                                 ${this.bandIndex === index ? 'is-active' : ''} 
                                 ${this.bandIndex +1 === index || this.bandIndex +1 === arr.length && index === 0 ? 'is-next' : ''}" 
@@ -91,7 +98,7 @@ class LineupSection extends LitElement {
 
             <div class="lineup__content">
                 <!-- <iframe class="lineup__video" 
-                    src="${this.lineup[this.bandIndex].url}"
+                    src="${this.edition.lineup[this.bandIndex].youtubeKey}"
                     
                     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                     allowfullscreen>
@@ -103,6 +110,7 @@ class LineupSection extends LitElement {
 
     firstUpdated() {
         this.loadPlayer();
+        console.log(this.edition.lineup);
     }
 
     startSlider() {
@@ -111,7 +119,7 @@ class LineupSection extends LitElement {
         this.sliderPause = false;
 
         this.timer = setInterval(() => {
-            const totalBands = this.lineup.length - 1;
+            const totalBands = this.edition.lineup.length - 1;
 
             if (this.bandIndex < totalBands) {
                 this.bandIndex += 1;
@@ -125,7 +133,7 @@ class LineupSection extends LitElement {
 
     }
 
-    stopSlider(event) {
+    stopSlider() {
         // console.log('stop slider');
         this.nextTimer = 0;
         clearInterval(this.timer);
@@ -140,8 +148,8 @@ class LineupSection extends LitElement {
         this.switchBand();
     }
 
-    switchBand(event) {
-        this.player.loadVideoById({videoId: this.lineup[this.bandIndex].url});
+    switchBand() {
+        this.player.loadVideoById({videoId: this.edition.lineup[this.bandIndex].youtubeKey});
         this.player.stopVideo();
     }
 
@@ -169,7 +177,7 @@ class LineupSection extends LitElement {
         this.player = new YT.Player(this.shadowRoot.querySelector('#player'), {
             height: '490',
             width: '880',
-            videoId: this.lineup[this.bandIndex].url,
+            videoId: this.edition.lineup[this.bandIndex].youtubeKey,
             playerVars: { controls:1, showinfo: 0, rel: 0, showsearch: 0, iv_load_policy: 3 },
             events: {
             'onReady': (e) => this.startSlider(),
@@ -198,4 +206,16 @@ class LineupSection extends LitElement {
     }
 }
 
-customElements.define('lineup-section', LineupSection);
+const mapStateToProps = (state, ctx) => {
+	return {
+		edition: selectors.getEdition(state, ctx.year)
+	};
+};
+
+// const mapDispatchToEvents = dispatch => {
+// 	return {
+// 		initApp: () => dispatch(actions.initApp())
+// 	};
+// };
+
+customElements.define('lineup-section',  connect(mapStateToProps)(LineupSection));
