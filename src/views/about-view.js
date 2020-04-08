@@ -23,14 +23,6 @@ class AboutView extends LitElement {
   render() {
     return html`
 
-      <style>
-        .section__container {
-          display: flex;
-          /* width: 60%; */
-          position: relative;
-        }
-      </style>
-
       <page-header 
         img="DSC_0664"
         height="300">

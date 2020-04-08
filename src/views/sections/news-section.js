@@ -1,7 +1,10 @@
 import { LitElement, html, css } from 'lit-element/';
 
-import '../components/news-card';
+import selectors from "../../store/selectors";
+import connect from "../../store/connect";
+import actions from "../../store/actions";
 
+import '../components/news-card';
 import style from "../../styles/main.scss";
 
 class NewsSection extends LitElement {
@@ -17,28 +20,7 @@ class NewsSection extends LitElement {
     
     constructor() {
         super();
-        this.news = [
-            {
-                img: 'DSC_0020',
-                title: 'Forte Montericco',
-                desc: '16 Agosto 2019 si terrà un aperitivo con gruppi e dj set nella magnifica cornice di Monte Ricco in cima al nostro splendido Parco Roccolo, non mancate!'
-            },
-            {
-              img: 'DSC_0785',
-              title: 'Socials',
-              desc: 'Per restare sempre aggiornati su Hard Rockolo Festival seguiteci sui nostri social, News, aggiornamenti e tante altre sorprese!'
-            },
-            {
-              img: 'DSC_0035',
-              title: 'Merch 2019',
-              desc: 'Merchindise originale marchiato Hard Rockolo Festival! Poster e magliette con design originali e giovanili.'
-            },
-            {
-              img: 'furio',
-              title: 'Line Up 2019',
-              desc: 'Quest’anno vi aspetta una serata straordinaria, il nostro palco sarà solcato da artisti formidabili!'
-            },
-        ];
+
     }
           
     render() {
@@ -53,4 +35,16 @@ class NewsSection extends LitElement {
     }
 }
 
-customElements.define('news-section', NewsSection);
+const mapStateToProps = (state, ctx) => {
+	return {
+		news: selectors.getNews(state)
+	};
+};
+
+// const mapDispatchToEvents = dispatch => {
+// 	return {
+// 		initApp: () => dispatch(actions.initApp())
+// 	};
+// };
+
+customElements.define('news-section', connect(mapStateToProps)(NewsSection));

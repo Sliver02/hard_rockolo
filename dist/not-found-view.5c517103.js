@@ -1,4 +1,4 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{27:function(e,t,n){"use strict";n.r(t);var s=n(0),o=n(2),c=n.n(o);class i extends s.a{static get styles(){return Object(s.b)([c.a])}render(){return s.c`
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{32:function(e,t,n){"use strict";n.r(t);var s=n(0),o=n(6),c=n.n(o);class i extends s.a{static get styles(){return Object(s.b)([c.a])}render(){return s.c`
       <style>
         .not-found {
           display: flex;
@@ -18,4 +18,4 @@
         </p>
       </div>
     `}}customElements.define("not-found-view",i)}}]);
-//# sourceMappingURL=not-found-view.84ca6ddd.js.map
+//# sourceMappingURL=not-found-view.5c517103.js.map

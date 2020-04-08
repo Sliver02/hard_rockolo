@@ -27,41 +27,6 @@ class LineupSection extends LitElement {
     constructor() {
         super();
         this.year = '2019',
-        // this.edition.lineup = this.edition.lineup;
-        // this.edition.lineup = [
-        //     {
-        //         name: 'Fuoriology',
-        //         url: 'gJjew3vnZ6k'
-        //     },
-        //     {
-        //         name: 'Earth Beat Movement',
-        //         url: 'IaqKXbKAOeU'
-        //     },
-        //     {
-        //         name: 'Mole Moonwalktet',
-        //         url: 'JzCIUPWVTEI'
-        //     },
-        //     {
-        //         name: 'Gold Miners NightClub',
-        //         url: 'V15vRciah-s'
-        //     },
-        //     {
-        //         name: 'Dolomhate',
-        //         url: 'sw9OatbbsIU'
-        //     },
-        //     {
-        //         name: 'Elena Mazzon',
-        //         url: 'CmqaF7_X_P4'
-        //     },
-        //     {
-        //         name: 'Da Quagga',
-        //         url: 'Pi7kWRtcTCQ'
-        //     },
-        //     {
-        //         name: 'Untamed Sound System',
-        //         url: 'n0FGhAP_mCw'
-        //     }
-        // ];
         this.days = [];
         this.bandIndex = 0;
         this.nextTimer = 0;
@@ -85,7 +50,7 @@ class LineupSection extends LitElement {
                 <h1 class="section__title">Line Up</h1>
             
                 <ul class="lineup__tag-list">
-                    ${this.edition.lineup.map((band, index, arr) => html `
+                    ${this.lineup.map((band, index, arr) => html `
                         <li class="lineup__tag 
                                 ${this.bandIndex === index ? 'is-active' : ''} 
                                 ${this.bandIndex +1 === index || this.bandIndex +1 === arr.length && index === 0 ? 'is-next' : ''}" 
@@ -97,12 +62,6 @@ class LineupSection extends LitElement {
             </div>
 
             <div class="lineup__content">
-                <!-- <iframe class="lineup__video" 
-                    src="${this.edition.lineup[this.bandIndex].youtubeKey}"
-                    
-                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe> -->
                 <div id="player" class="lineup__video"></div>
             </div>
         `; 
@@ -110,7 +69,7 @@ class LineupSection extends LitElement {
 
     firstUpdated() {
         this.loadPlayer();
-        console.log(this.edition.lineup);
+        console.log(this.lineup);
     }
 
     startSlider() {
@@ -119,7 +78,7 @@ class LineupSection extends LitElement {
         this.sliderPause = false;
 
         this.timer = setInterval(() => {
-            const totalBands = this.edition.lineup.length - 1;
+            const totalBands = this.lineup.length - 1;
 
             if (this.bandIndex < totalBands) {
                 this.bandIndex += 1;
@@ -149,7 +108,7 @@ class LineupSection extends LitElement {
     }
 
     switchBand() {
-        this.player.loadVideoById({videoId: this.edition.lineup[this.bandIndex].youtubeKey});
+        this.player.loadVideoById({videoId: this.lineup[this.bandIndex].youtubeKey});
         this.player.stopVideo();
     }
 
@@ -177,7 +136,7 @@ class LineupSection extends LitElement {
         this.player = new YT.Player(this.shadowRoot.querySelector('#player'), {
             height: '490',
             width: '880',
-            videoId: this.edition.lineup[this.bandIndex].youtubeKey,
+            videoId: this.lineup[this.bandIndex].youtubeKey,
             playerVars: { controls:1, showinfo: 0, rel: 0, showsearch: 0, iv_load_policy: 3 },
             events: {
             'onReady': (e) => this.startSlider(),
@@ -208,7 +167,7 @@ class LineupSection extends LitElement {
 
 const mapStateToProps = (state, ctx) => {
 	return {
-		edition: selectors.getEdition(state, ctx.year)
+		lineup: selectors.getLineup(state, ctx.year)
 	};
 };
 

@@ -10,6 +10,7 @@ import './sections/merch-section';
   import './components/merch-slider';
 import './sections/map-section';
 import './sections/contact-section';
+import './overaly-view';
 
 class HomeView extends LitElement {
 
@@ -28,6 +29,7 @@ class HomeView extends LitElement {
   
   render() {
     return html`
+    <!-- <overlay-view></overlay-view> -->
       <page-header 
         video="background"
         img="DSC_0840"

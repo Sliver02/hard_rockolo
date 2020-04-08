@@ -1,4 +1,4 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{22:function(t,e,s){"use strict";s.d(e,"b",(function(){return U})),s.d(e,"a",(function(){return Y}));
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{27:function(t,e,s){"use strict";s.d(e,"b",(function(){return U})),s.d(e,"a",(function(){return Y}));
 /**
  * @license
  * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
@@ -149,4 +149,4 @@ X((t,e)=>t.querySelector(e)),X((t,e)=>t.querySelectorAll(e));function X(t){retur
  * http://polymer.github.io/PATENTS.txt
  */
 class Y extends Q{update(t){super.update(t);const e=this.render();e instanceof v&&this.constructor.render(e,this.renderRoot,{scopeName:this.localName,eventContext:this})}render(){}}Y.render=(t,e,s)=>{if(!s||"object"!=typeof s||!s.scopeName)throw new Error("The `scopeName` option is required.");const i=s.scopeName,n=$.has(e),r=I&&11===e.nodeType&&!!e.host,a=r&&!B.has(i),l=a?document.createDocumentFragment():e;if(((t,e,s)=>{let i=$.get(e);void 0===i&&(o(e,e.firstChild),$.set(e,i=new P(Object.assign({templateFactory:k},s))),i.appendInto(e)),i.setValue(t),i.commit()})(t,l,Object.assign({templateFactory:L(i)},s)),a){const t=$.get(l);$.delete(l);const s=t.value instanceof g?t.value.template:void 0;H(i,l,s),o(e,e.firstChild),e.appendChild(l),$.set(e,t)}!n&&r&&window.ShadyCSS.styleElement(e.host)}}}]);
-//# sourceMappingURL=vendors~merch.a0b11664.js.map
+//# sourceMappingURL=vendors~merch.663dc2dc.js.map

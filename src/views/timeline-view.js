@@ -1,5 +1,9 @@
 import { LitElement, html, css } from 'lit-element/';
 
+import selectors from "../store/selectors";
+import connect from "../store/connect";
+import actions from "../store/actions";
+
 import './components/page-header';
 import style from "../styles/components/timeline.scss";
 
@@ -23,13 +27,6 @@ class TimelineView extends LitElement {
   render() {
     return html`
 
-      <style>
-        .section__container {
-          display: flex;
-          position: relative;
-        }
-      </style>
-
       <page-header 
         img="DSC_0501"
         height="300">
@@ -38,46 +35,16 @@ class TimelineView extends LitElement {
       <div class="section">
         <div class="timeline">
             <ul>
+              ${this.editions.map( edition => html`
                 <li>
                     <div class="timeline__year">
-                        <h1>2019</h1>
+                        <h1>${edition.year}</h1>
                     </div>
                     <div class="timeline__poster">
-                        <img src="./assets/img/poster/2019.jpg"/>
+                        <img src="./assets/img/poster/poster_${edition.year}.jpg"/>
                     </div>
                 </li>
-                <li>
-                    <div class="timeline__year">
-                        <h1>2018</h1>
-                    </div>
-                    <div class="timeline__poster">
-                        <img src="./assets/img/poster/2018.jpg"/>
-                    </div>
-                </li>
-                <li>
-                    <div class="timeline__year">
-                        <h1>2017</h1>
-                    </div>
-                    <div class="timeline__poster">
-                        <img src="./assets/img/poster/2017.jpg"/>
-                    </div>
-                </li>
-                <li>
-                    <div class="timeline__year">
-                        <h1>2015</h1>
-                    </div>
-                    <div class="timeline__poster">
-                        <img src="./assets/img/poster/2015.jpg"/>
-                    </div>
-                </li>
-                <li>
-                    <div class="timeline__year">
-                        <h1>2014</h1>
-                    </div>
-                    <div class="timeline__poster">
-                        <img src="./assets/img/poster/2014.jpg"/>
-                    </div>
-                </li>
+              `)}
             </ul>
         </div>
       </div>
@@ -90,4 +57,16 @@ class TimelineView extends LitElement {
   }
 }
 
-customElements.define('timeline-view', TimelineView);
+const mapStateToProps = (state, ctx) => {
+	return {
+		editions: selectors.getEditions(state),
+	};
+};
+
+// const mapDispatchToEvents = dispatch => {
+// 	return {
+// 		initApp: () => dispatch(actions.initApp())
+// 	};
+// };
+
+customElements.define('timeline-view', connect(mapStateToProps)(TimelineView));

@@ -1,5 +1,10 @@
 @import '../main';
 
+.section__container {
+    display: flex;
+    position: relative;
+}
+
 .timeline {
     max-width: 800px;
     position: relative;

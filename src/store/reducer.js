@@ -5,7 +5,7 @@ import sponsor from "./sponsor";
 
 const INITIAL_STATE = {
     init: {
-        appInit: false
+        overlay: false
     },
     editions,
     news,
@@ -19,7 +19,7 @@ export default (state = INITIAL_STATE, action) => {
                 ...state,
                 init: {
                     ...state.init,
-                    appInit: action.payload
+                    overlay: action.payload
                 }
             };
         }
