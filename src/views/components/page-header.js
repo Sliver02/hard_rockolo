@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit-element/';
 
-import style from "../../styles/components/header.scss";
+import style from "../../assets/styles/components/header.scss";
 
 // import simpleParallax from 'simple-parallax-js';
 

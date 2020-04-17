@@ -75,10 +75,6 @@ const commonConfig = merge([
     module: {
       rules: [
         {
-          test: /\.css$/i,
-          use: ['style-loader', 'css-loader'],
-        },
-        {
           test: /\.(s*)css$/,
           use: ['css-loader', 'sass-loader'],
         },

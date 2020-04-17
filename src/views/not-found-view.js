@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit-element/';
 
-import style from "../styles/main.scss";
+import style from "../assets/styles/main.scss";
 
 class NotFoundView extends LitElement {
 

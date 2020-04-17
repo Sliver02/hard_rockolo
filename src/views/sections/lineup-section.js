@@ -4,7 +4,7 @@ import selectors from "../../store/selectors";
 import connect from "../../store/connect";
 import actions from "../../store/actions";
 
-import style from "../../styles/components/lineup.scss";
+import style from "../../assets/styles/components/lineup.scss";
 
 class LineupSection extends LitElement {
 

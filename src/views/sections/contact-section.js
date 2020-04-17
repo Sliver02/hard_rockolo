@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit-element/';
 
-import style from "../../styles/components/contact.scss";
+import style from "../../assets/styles/components/contact.scss";
 
 class ContactSection extends LitElement {
 

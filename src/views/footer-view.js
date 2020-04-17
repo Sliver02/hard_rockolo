@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit-element/';
 
-import footer from "../styles/components/footer.scss";
+import footer from "../assets/styles/components/footer.scss";
 
 class AboutView extends LitElement {
 

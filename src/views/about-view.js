@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit-element/';
 
 import './components/page-header';
-import style from "../styles/components/about.scss";
+import style from "../assets/styles/components/about.scss";
 
 class AboutView extends LitElement {
 

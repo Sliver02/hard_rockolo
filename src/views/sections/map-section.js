@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit-element/';
 import mapboxgl from 'mapbox-gl';
 
-import style from "../../styles/components/map.scss";
+import style from "../../assets/styles/components/map.scss";
 
 class MapSection extends LitElement {
 

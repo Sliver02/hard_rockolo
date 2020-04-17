@@ -5,7 +5,7 @@ import connect from "../store/connect";
 import actions from "../store/actions";
 
 import './components/page-header';
-import style from "../styles/components/timeline.scss";
+import style from "../assets/styles/components/timeline.scss";
 
 class TimelineView extends LitElement {
 

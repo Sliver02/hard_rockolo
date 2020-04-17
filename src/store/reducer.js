@@ -5,7 +5,9 @@ import sponsor from "./sponsor";
 
 const INITIAL_STATE = {
     init: {
-        overlay: false
+        initApp: false,
+        overlay: false,
+        currentArticleID: 3,
     },
     editions,
     news,
@@ -19,7 +21,25 @@ export default (state = INITIAL_STATE, action) => {
                 ...state,
                 init: {
                     ...state.init,
-                    overlay: action.payload
+                    initApp: action.payload
+                }
+            };
+        }
+        case types.CHANGE_OVERLAY: {
+            return {
+                ...state,
+                init: {
+                    ...state.init,
+                    overlay: !state.init.overlay,
+                }
+            };
+        }
+        case types.SWITCH_ARTICLE: {
+            return {
+                ...state,
+                init: {
+                    ...state.init,
+                    currentArticleID: action.payload,
                 }
             };
         }

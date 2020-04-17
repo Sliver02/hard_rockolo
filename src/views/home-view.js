@@ -1,6 +1,11 @@
 import { LitElement, html, css } from 'lit-element/';
 
-import style from "../styles/components/home.scss";
+import selectors from "../store/selectors";
+import connect from "../store/connect";
+import actions from "../store/actions";
+
+import main from "../assets/styles/main.scss";
+import home from "../assets/styles/components/home.scss";
 
 import './components/page-header';
 import './sections/news-section';
@@ -15,21 +20,25 @@ import './overaly-view';
 class HomeView extends LitElement {
 
   static get styles() {
-		return css([style]);
+		return css([main, home]);
 	}
 
   static get properties() {
     return {
+      showOverlay: {type: Boolean}
     };
   }
 
   constructor() {
       super();
+      // this.showOverlay = true;
   }
   
   render() {
     return html`
-    <!-- <overlay-view></overlay-view> -->
+
+      ${this.showOverlay ? html`<overlay-view></overlay-view>` : html``}
+    
       <page-header 
         video="background"
         img="DSC_0840"
@@ -84,8 +93,29 @@ class HomeView extends LitElement {
     window.scrollTo(0, 0);
 		// this.initApp();
 
-    // console.log(this.edition);
+    console.log(this.showOverlay);
+  }
+
+  blockScroll(newValue) {
+    // console.log(newValue);
+    if (this.showOverlay === true) {
+        document.querySelector('html').style.overflowY = 'hidden';
+    } else {
+        document.querySelector('html').style.overflowY = 'auto';
+    }
   }
 }
 
-customElements.define('home-view', HomeView);
+const mapStateToProps = (state) => {
+	return {
+		showOverlay: selectors.getOverlay(state)
+	};
+};
+
+const mapDispatchToEvents = dispatch => {
+	return {
+
+	};
+};
+
+customElements.define('home-view', connect(mapStateToProps, mapDispatchToEvents)(HomeView));

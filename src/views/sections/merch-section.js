@@ -2,7 +2,7 @@ import { LitElement, html, css } from 'lit-element/';
 
 import '../components/merch-slider';
 
-import style from "../../styles/main.scss";
+import style from "../../assets/styles/main.scss";
 
 class MerchSection extends LitElement {
 

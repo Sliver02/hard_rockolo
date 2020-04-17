@@ -18,11 +18,10 @@ function* watchChangedInit() {
         yield console.log("ciao");
     });
 }
-
 export default function* (){
     yield all([
         watchInit(),
-        watchChangedInit()
+        watchChangedInit(),
     ]);
 }
 

@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit-element/';
 
-import style from "../../styles/components/slider.scss";
+import style from "../../assets/styles/components/slider.scss";
 
 class MerchSlider extends LitElement {
 

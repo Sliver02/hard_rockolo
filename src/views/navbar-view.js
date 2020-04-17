@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit-element/';
 
-import navbar from "../styles/components/navbar.scss";
+import navbar from "../assets/styles/components/navbar.scss";
 
 class AboutView extends LitElement {
 

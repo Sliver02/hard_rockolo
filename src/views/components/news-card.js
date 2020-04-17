@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit-element/';
 
-import style from "../../styles/components/newsCard.scss";
+import style from "../../assets/styles/components/newsCard.scss";
 
 class NewsCard extends LitElement {
 
