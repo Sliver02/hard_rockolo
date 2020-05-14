@@ -2,14 +2,6 @@
 
 $shared-width: 300px;
 
-.section__container {
-    // margin-bottom: 60px;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    max-width: 60%;
-}
-
 .about {
 
     @include img-wrap;

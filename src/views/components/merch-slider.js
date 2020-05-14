@@ -84,7 +84,6 @@ class MerchSlider extends LitElement {
                 }
             </style>
             
-            <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
             <div class="slider">
                 ${ this.merch.map((product, index) => html `
@@ -100,10 +99,10 @@ class MerchSlider extends LitElement {
 
                 
                 <div class="slider__btn slider__btn--left" @click="${() => this.prevSlide()}">
-                    <i class="fas fa-chevron-left"></i>
+                    <i class="icon fa-chevron-left"></i>
                 </div>
                 <div class="slider__btn slider__btn--right" @click="${() => this.nextSlide()}">
-                    <i class="fas fa-chevron-right"></i>
+                    <i class="icon fa-chevron-right"></i>
                 </div>
             </div>
 

@@ -25,9 +25,7 @@ class NewsCard extends LitElement {
     }
           
     render() {
-        return html`
-            <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-            
+        return html`            
             <div class="news">
                 ${ this.img === '' ? html`` : html`
                     <div class="news__img-wrap">

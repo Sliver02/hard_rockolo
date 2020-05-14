@@ -27,8 +27,10 @@ class OverlayView extends LitElement {
           
     render() {
         return html`
+            <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
             <div class="overlay__close" @click="${this.handleClick}">
-                <i class="fas fa-times-circle"></i>
+                <i class="icon fa-times-circle"></i>
             </div>
             <div class="overlay__container">
                 <h1 class="overlay__title">
