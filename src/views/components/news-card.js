@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit-element/';
 
-import style from "../../assets/styles/components/newsCard.scss";
+import style from "../../styles/components/newsCard.scss";
 
 class NewsCard extends LitElement {
 
@@ -26,12 +26,13 @@ class NewsCard extends LitElement {
           
     render() {
         return html`
+            <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
             
             <div class="news">
                 ${ this.img === '' ? html`` : html`
                     <div class="news__img-wrap">
                         <div class="news__img">
-                            <img src="./assets/img/news/${this.img}.jpg"/>
+                            <img src="./assets/images/news/${this.img}.jpg"/>
                         </div>
                     </div>
                 `} 

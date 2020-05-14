@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit-element/';
 
 import './components/page-header';
-import style from "../assets/styles/components/about.scss";
+import style from "../styles/components/about.scss";
 
 class AboutView extends LitElement {
 
@@ -35,7 +35,7 @@ class AboutView extends LitElement {
           
           <div class="about__img-wrap">
             <div class="about__img">
-              <img src="./assets/img/header/DSC_0003.jpg"/>
+              <img src="./assets/images/header/DSC_0003.jpg"/>
             </div>
           </div>
           <p class="about__desc">
@@ -47,7 +47,7 @@ class AboutView extends LitElement {
 
           <div class="about__img-wrap">
             <div class="about__img">
-              <img src="./assets/img/header/cadore-212.jpg"/>
+              <img src="./assets/images/header/cadore-212.jpg"/>
             </div>
           </div>
           <p class="about__desc">

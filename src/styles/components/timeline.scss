@@ -1,0 +1,118 @@
+@import '../main';
+
+.section__container {
+    display: flex;
+    position: relative;
+}
+
+.timeline {
+    max-width: 800px;
+    position: relative;
+    // margin: 50px ;
+    // padding: 40px 0;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        width: 5px;
+        height: 100%;
+        background: $dark-terracotta;
+        border-radius: 3px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+
+        li {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            
+            list-style: none;
+            width: 50%;
+            padding: 40px 40px;
+
+            &:hover {
+                &::before {
+                    transform: scale(1.5);
+                    box-shadow: 0 0 0 6px rgba($color: $dark-terracotta, $alpha: 0.4);
+                }
+            }
+
+            
+            &:before {
+                $radious: 25px;
+
+                content: '';
+                position: absolute;
+                width: $radious;
+                height: $radious;
+                border-radius: 50%;
+                background: $dark-terracotta;
+                box-shadow: 0 0 0 8px rgba($color: $dark-terracotta, $alpha: 0.4);
+                transition: transform 0.5s, box-shadow 0.5s;
+            }
+
+            // &:not(:first-of-type) {
+            //     margin-top: -100px;
+            // }
+            
+            &:nth-child(odd) {
+                align-items: flex-end;
+
+                &:before {
+                    right: -15px;
+                }
+
+                .timeline__year {
+                    right: -180px;
+                }
+                
+                .timeline__poster {
+                    &:hover {
+                        transform: translateX(-20px);
+                    }
+                }
+            }
+
+            &:nth-child(even) {
+                text-align: right;
+                align-self: flex-end;
+                align-items: flex-start;
+               
+                &:before {
+                    left: -10px;
+                }
+
+                .timeline__year {
+                    left: -175px
+                }
+
+                .timeline__poster {
+                    &:hover {
+                        transform: translateX(20px);
+                    }
+                }
+            }
+        }
+    }
+
+    &__year {
+        position: absolute;
+        margin-top: -15px;
+        color: $dark-terracotta;
+    }
+
+    &__poster {
+        cursor: pointer;
+        display: flex;
+        transition: transform 0.5s;
+
+        img {
+            max-width: 550px;
+            max-height: 600px;
+        }
+    }
+}

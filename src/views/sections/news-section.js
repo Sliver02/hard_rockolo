@@ -5,7 +5,7 @@ import connect from "../../store/connect";
 import actions from "../../store/actions";
 
 import '../components/news-card';
-import style from "../../assets/styles/main.scss";
+import style from "../../styles/main.scss";
 
 class NewsSection extends LitElement {
 

@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit-element/';
 
-import navbar from "../assets/styles/components/navbar.scss";
+import navbar from "../styles/components/navbar.scss";
 
 class AboutView extends LitElement {
 
@@ -24,7 +24,7 @@ class AboutView extends LitElement {
       <nav class="navbar">
           <div class="navbar__logo">
               <a href="/">
-              <img src="./assets/img/logo.png" alt="">
+              <img src="./assets/images/logo.png" alt="">
               </a>
           </div>
 

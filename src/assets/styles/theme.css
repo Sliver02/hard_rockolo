@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat:400,900|Raleway|Spartan&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body, input {
+    font-family: 'Spartan', sans-serif;
+    line-height: 1.4;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    
+    background: #ddd;
+}
+
+main {
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 0.8;
+    letter-spacing: -0.2rem;
+    margin-bottom: 30px;
+}
+
+h2 {
+    line-height: 0.8;
+}
+
+ul {
+    list-style-type: none;
+}
+
+hr {
+    margin: 30px 0;
+}
+
+span {
+    font-size: 0.8rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+
+    width: 100%;
+    
+    z-index: 10;
+    padding: 20px 40px;
+
+    transition: background 0.4s ease-out;
+}

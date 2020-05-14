@@ -1,6 +1,10 @@
 import { LitElement, html, css } from 'lit-element/';
 
-import style from "../../assets/styles/components/slider.scss";
+import selectors from "../../store/selectors";
+import connect from "../../store/connect";
+import actions from "../../store/actions";
+
+import style from "../../styles/components/slider.scss";
 
 class MerchSlider extends LitElement {
 
@@ -80,6 +84,7 @@ class MerchSlider extends LitElement {
                 }
             </style>
             
+            <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
             <div class="slider">
                 ${ this.merch.map((product, index) => html `
@@ -88,7 +93,7 @@ class MerchSlider extends LitElement {
                         ${this.imgPrev === index ? 'is-prev' : ''}">
 
                         <div class="slider__img-wrap ">
-                            <img class="slider__img" src="./assets/img/merch/slider/slide_${product.url}.jpg" />
+                            <img class="slider__img" src="./assets/images/merch/slider/slide_${product.url}.jpg" />
                         </div>
                     </div>
                 `)}
@@ -116,6 +121,7 @@ class MerchSlider extends LitElement {
 
     firstUpdated() {
         this.startSlide(4);
+        console.log(this.tshirts);
     }
 
     startSlide(newTime) {
@@ -179,4 +185,16 @@ class MerchSlider extends LitElement {
     
 }
 
-customElements.define('merch-slider', MerchSlider);
+const mapStateToProps = (state) => {
+	return {
+		tshirts: selectors.getTshirts(state)
+	};
+};
+
+const mapDispatchToEvents = dispatch => {
+	return {
+
+	};
+};
+
+customElements.define('merch-slider', connect(mapStateToProps, mapDispatchToEvents)(MerchSlider));

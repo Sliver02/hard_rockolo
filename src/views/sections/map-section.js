@@ -1,9 +1,13 @@
 import { LitElement, html, css } from 'lit-element/';
 import mapboxgl from 'mapbox-gl';
 
-import style from "../../assets/styles/components/map.scss";
+import style from "../../styles/components/map.scss";
 
 class MapSection extends LitElement {
+
+    // createRenderRoot() {
+    //     return this;
+    // }
 
     static get styles() {
 		return css([style]);
@@ -38,7 +42,7 @@ class MapSection extends LitElement {
                     'properties': {
                         'infobox': true,
                         'img': '',
-                        'description': 'Truckeroo brings dozens of food trucks, live music, and games to half and M Street SE (across from Navy Yard Metro Station) today from 11:00 a.m. to 11:00 p.m.',
+                        'description': '',
                         'iconSize': [50, 50]
                     },
                     'geometry': {
@@ -51,7 +55,7 @@ class MapSection extends LitElement {
                     'properties': {
                         'infobox': true,
                         'img': '',
-                        'description': 'Truckeroo brings dozens of food trucks, live music, and games to half and M Street SE (across from Navy Yard Metro Station) today from 11:00 a.m. to 11:00 p.m.',
+                        'description': '',
                         'iconSize': [80, 80]
                     },
                     'geometry': {
@@ -66,6 +70,9 @@ class MapSection extends LitElement {
 
     render() {
         return html`
+            <link rel="stylesheet" type="text/css" href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css">
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
             <div id="map" class="map"></div>
             <div class="map__info">
                 <ul>
@@ -80,7 +87,7 @@ class MapSection extends LitElement {
     }
 
     firstUpdated() {
-        this.initMap();
+        this.initMap();     
         this.map.resize();
     }
 
@@ -121,9 +128,9 @@ class MapSection extends LitElement {
 
             if (marker.properties.icon === 'local_parking') {
                 el.classList.add('marker--parking');
-                el.style.backgroundImage = `url(../../assets/img/icons/${marker.properties.icon}.svg)`;
+                el.style.backgroundImage = `url(../../assets/images/icons/${marker.properties.icon}.svg)`;
             } else {
-                el.style.backgroundImage = `url(../../assets/img/icons/hr_stemma.svg)`;
+                el.style.backgroundImage = `url(../../assets/images/icons/hr_stemma.svg)`;
             }
 
             el.style.width = marker.properties.iconSize[0] + 'px';

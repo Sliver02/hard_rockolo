@@ -6,6 +6,7 @@ const getCurrentArticleID = state => state.init.currentArticleID || 0;
 const getArticle = (state) => getNews(state)[getCurrentArticleID(state)];
 const getEditions = state => state.editions || [];
 const getLineup = (state, year) => getEditions(state).find(edition => edition.year == year).lineup;
+const getTshirts = (state) => state.merchandise;
 
 export default {
     // getAppInit,
@@ -15,4 +16,5 @@ export default {
     getCurrentArticleID,
     getEditions,
     getLineup,
+    getTshirts,
 };

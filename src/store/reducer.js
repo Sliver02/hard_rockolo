@@ -1,5 +1,6 @@
 import types from "./types";
 import editions from "./editions";
+import merchandise from "./merchandise";
 import news from "./news";
 import sponsor from "./sponsor";
 
@@ -10,6 +11,7 @@ const INITIAL_STATE = {
         currentArticleID: 3,
     },
     editions,
+    merchandise,
     news,
     sponsor,
 };

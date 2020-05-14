@@ -1,11 +1,11 @@
 import { LitElement, html, css } from 'lit-element/';
 
-import footer from "../assets/styles/components/footer.scss";
+import style from "../styles/components/footer.scss";
 
 class AboutView extends LitElement {
 
   static get styles() {
-		return css([footer]);
+		return css([style]);
 	}
 
   static get properties() {

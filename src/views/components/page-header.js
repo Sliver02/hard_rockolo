@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit-element/';
 
-import style from "../../assets/styles/components/header.scss";
+import style from "../../styles/components/header.scss";
 
 // import simpleParallax from 'simple-parallax-js';
 
@@ -43,12 +43,12 @@ class PageHeader extends LitElement {
 
                 ${this.video === '' ? 
                     html `
-                        <img class="header__img" src="./assets/img/header/${this.img}.jpg"/>
+                        <img class="header__img" src="./assets/images/header/${this.img}.jpg"/>
                     `
                     : html `
 
-                        <video class="header__vid" autoplay loop muted poster="./assets/img/header/${this.img}.jpg"> 
-                            <source src="../assets/vid/${this.video}.mp4" type="video/mp4">
+                        <video class="header__vid" autoplay loop muted poster="./assets/images/header/${this.img}.jpg"> 
+                            <source src="../assets/video/${this.video}.mp4" type="video/mp4">
                         </video> 
                     `}
                    

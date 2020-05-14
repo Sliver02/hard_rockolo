@@ -1,4 +1,4 @@
-// import './styles/main.scss';
+import './styles/components/map.scss';
 import Navbar from './views/navbar-view';
 import Footer from './views/footer-view';
 import './views/home-view';

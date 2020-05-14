@@ -4,7 +4,7 @@ import selectors from "../store/selectors";
 import connect from "../store/connect";
 import actions from "../store/actions";
 
-import style from "../assets/styles/components/overlay.scss";
+import style from "../styles/components/overlay.scss";
 
 class OverlayView extends LitElement {
 
@@ -36,7 +36,7 @@ class OverlayView extends LitElement {
                 </h1>
                 <div class="overlay__img-wrap">
                     <div class="overlay__img"> 
-                        <img src="./assets/img/news/${this.article.img}.jpg"/>
+                        <img src="./assets/images/news/${this.article.img}.jpg"/>
                     </div>
                 </div>
                 <p class="overlay__desc">

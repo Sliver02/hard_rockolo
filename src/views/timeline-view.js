@@ -5,7 +5,7 @@ import connect from "../store/connect";
 import actions from "../store/actions";
 
 import './components/page-header';
-import style from "../assets/styles/components/timeline.scss";
+import style from "../styles/components/timeline.scss";
 
 class TimelineView extends LitElement {
 
@@ -41,7 +41,7 @@ class TimelineView extends LitElement {
                         <h1>${edition.year}</h1>
                     </div>
                     <div class="timeline__poster">
-                        <img src="./assets/img/poster/poster_${edition.year}.jpg"/>
+                        <img src="./assets/images/poster/poster_${edition.year}.jpg"/>
                     </div>
                 </li>
               `)}

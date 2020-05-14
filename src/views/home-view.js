@@ -4,8 +4,8 @@ import selectors from "../store/selectors";
 import connect from "../store/connect";
 import actions from "../store/actions";
 
-import main from "../assets/styles/main.scss";
-import home from "../assets/styles/components/home.scss";
+// import main from "../styles/main.scss";
+import style from "../styles/components/home.scss";
 
 import './components/page-header';
 import './sections/news-section';
@@ -20,7 +20,7 @@ import './overaly-view';
 class HomeView extends LitElement {
 
   static get styles() {
-		return css([main, home]);
+		return css([style]);
 	}
 
   static get properties() {
