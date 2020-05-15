@@ -20,7 +20,7 @@
             height: 100%;
             // transform: rotate(45grad);
             overflow: hidden;
-
+display: flex;
             z-index: 1;
 
             transition: transform 1s;
@@ -48,6 +48,7 @@
                 // height: 100%;
                 overflow: hidden;
                 // top: -40%;
+                align-self: center;
             }
 
             &__img {
