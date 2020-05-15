@@ -30,9 +30,9 @@ class AboutView extends LitElement {
 
       
       <div class="section">
-        <div class="section__container">
-          <h1 class="about__title">About Us</h1>
-          
+        <h1 class="section__title">About Us</h1>
+        
+        <div class="about">
           <div class="about__img-wrap">
             <div class="about__img">
               <img src="./assets/images/header/DSC_0003.jpg"/>
@@ -57,8 +57,10 @@ class AboutView extends LitElement {
             Unitevi a noi nel riaccendere le notti tra le Dolomiti, godetevi il panorama mozzafiato sul Lago centro Cadore e preparatevi a scatenarvi davanti al nostro Palco!
           </p>
 
-          <iframe height="700" src="https://www.youtube.com/embed/_ZayLGaoXFY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
+
+        <iframe height="300" src="https://www.youtube.com/embed/_ZayLGaoXFY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
       </div>
 
     `;
