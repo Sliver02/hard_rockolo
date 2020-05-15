@@ -44,7 +44,7 @@ class HomeView extends LitElement {
         img="DSC_0840"
         title="Hard Rockolo"
         subtitle="La musica che ami nel cuore delle Dolomiti"
-        height="800">
+        height="100">
       </page-header>
 
       <div id="news" class="section" >
@@ -108,7 +108,7 @@ class HomeView extends LitElement {
 
 const mapStateToProps = (state) => {
 	return {
-		showOverlay: selectors.getOverlay(state)
+		showOverlay: selectors.getShowOverlay(state)
 	};
 };
 

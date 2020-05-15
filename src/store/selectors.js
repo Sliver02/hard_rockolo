@@ -1,6 +1,7 @@
 
 // const getAppInit = state => state.init.appInit; 
-const getOverlay = state => state.init.overlay || false;
+const getShowOverlay = state => state.init.showOverlay || false;
+const getShowMenu = state => state.init.showMenu || false;
 const getNews = state => state.news || [];
 const getCurrentArticleID = state => state.init.currentArticleID || 0;
 const getArticle = (state) => getNews(state)[getCurrentArticleID(state)];
@@ -10,7 +11,8 @@ const getTshirts = (state) => state.merchandise;
 
 export default {
     // getAppInit,
-    getOverlay,
+    getShowOverlay,
+    getShowMenu,
     getNews,
     getArticle,
     getCurrentArticleID,

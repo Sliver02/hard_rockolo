@@ -1,8 +1,7 @@
-import './styles/components/map.scss';
-import Navbar from './views/navbar-view';
-import Footer from './views/footer-view';
-import './views/home-view';
 import {Router} from '@vaadin/router';
+import Footer from './views/footer-view';
+import Navbar from './views/navbar-view';
+import './views/home-view';
 
 window.addEventListener('load', () => {
     Navbar();

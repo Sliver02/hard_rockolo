@@ -22,7 +22,7 @@ class OverlayView extends LitElement {
     }
 
     handleClick() {
-        this.changeOverlay();
+        this.toggleOverlay();
     }
           
     render() {
@@ -65,7 +65,7 @@ const mapStateToProps = (state, ctx) => {
 
 const mapDispatchToEvents = dispatch => {
 	return {
-        changeOverlay: () => dispatch(actions.changeOverlay())
+        toggleOverlay: () => dispatch(actions.toggleOverlay())
 	};
 };
 

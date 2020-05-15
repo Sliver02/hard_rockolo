@@ -35,24 +35,21 @@ class PageHeader extends LitElement {
 
             <style>
                 .header {
-                    height: ${this.height}px;
+                    height: ${this.height}vh;
                 }
             </style>
 
             <div class="header">
 
-                ${this.video === '' ? 
+                ${this.video === '' || this.video === undefined ? 
                     html `
                         <img class="header__img" src="./assets/images/header/${this.img}.jpg"/>
                     `
                     : html `
-
                         <video class="header__vid" autoplay loop muted poster="./assets/images/header/${this.img}.jpg"> 
                             <source src="../assets/video/${this.video}.mp4" type="video/mp4">
                         </video> 
                     `}
-                   
-                
 
                 <div class="header__text">
                     <h1 class="header__title">

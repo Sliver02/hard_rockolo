@@ -29,7 +29,7 @@ class TimelineView extends LitElement {
 
       <page-header 
         img="DSC_0501"
-        height="300">
+        height="30">
       </page-header>
 
       <div class="section">

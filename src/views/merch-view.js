@@ -27,6 +27,10 @@ class MerchView extends BaseView {
       <merch-slider></merch-slider>
     `;
   }
+
+  firstUpdated() {
+    window.scrollTo(0, 0);
+  }
 }
 
 customElements.define('merch-view', MerchView);

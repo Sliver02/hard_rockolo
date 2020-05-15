@@ -25,7 +25,7 @@ class AboutView extends LitElement {
 
       <page-header 
         img="DSC_0664"
-        height="300">
+        height="30">
       </page-header>
 
       

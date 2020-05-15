@@ -7,8 +7,9 @@ import sponsor from "./sponsor";
 const INITIAL_STATE = {
     init: {
         initApp: false,
-        overlay: false,
         currentArticleID: 3,
+        showOverlay: false,
+        showMenu: false,
     },
     editions,
     merchandise,
@@ -27,21 +28,33 @@ export default (state = INITIAL_STATE, action) => {
                 }
             };
         }
-        case types.CHANGE_OVERLAY: {
-            return {
-                ...state,
-                init: {
-                    ...state.init,
-                    overlay: !state.init.overlay,
-                }
-            };
-        }
+        
         case types.SWITCH_ARTICLE: {
             return {
                 ...state,
                 init: {
                     ...state.init,
                     currentArticleID: action.payload,
+                }
+            };
+        }
+
+        case types.TOGGLE_OVERLAY: {
+            return {
+                ...state,
+                init: {
+                    ...state.init,
+                    showOverlay: !state.init.showOverlay,
+                }
+            };
+        }
+
+        case types.TOGGLE_MENU: {
+            return {
+                ...state,
+                init: {
+                    ...state.init,
+                    showMenu: !state.init.showMenu,
                 }
             };
         }
