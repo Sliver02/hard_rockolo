@@ -1,0 +1,17 @@
+@import '../main';
+
+.merch-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .merch-container__text {
+
+        // padding-left: 60px;
+        // max-width: 550px;
+        padding: 20px 20px;
+
+        a {
+            color: $dark-terracotta;
+        }
+    }
+}

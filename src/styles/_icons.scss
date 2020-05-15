@@ -40,3 +40,28 @@
     vertical-align: middle;
     font-weight: 510;
 }
+
+.fa-chevron-down::before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f078';
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 900;
+}
+
+.fa-facebook-square::before {
+    font-family: 'Font Awesome 5 Brands';
+    content: '\f082';
+    display: inline-block;
+    vertical-align: middle;
+    // font-weight: 900;
+}
+
+.fa-instagram::before {
+    font-family: 'Font Awesome 5 Brands';
+    content: '\f16d';
+    display: inline-block;
+    vertical-align: middle;
+    // font-weight: 600;
+}
+

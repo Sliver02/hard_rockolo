@@ -65,7 +65,8 @@ class AboutView extends LitElement {
   }
 
   firstUpdated() {
-    window.scrollTo(0, 0);
+    var window = document.querySelector('html');
+    window.scrollTop = 0;
   }
 }
 

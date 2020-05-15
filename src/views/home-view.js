@@ -31,7 +31,10 @@ class HomeView extends LitElement {
 
   constructor() {
       super();
-      // this.showOverlay = true;
+      
+  }
+
+  updated(oldValue) {
   }
   
   render() {
@@ -42,47 +45,49 @@ class HomeView extends LitElement {
       <page-header 
         video="background"
         img="DSC_0840"
-        title="Hard Rockolo"
+        banner="Hard Rockolo"
         subtitle="La musica che ami nel cuore delle Dolomiti"
-        height="100">
+        height="100"
+        scrollDown="true">
       </page-header>
 
       <div id="news" class="section" >
-        <div class="section__container">
-          <h1 class="section__title">News</h1>
+        <h1 class="section__title">News</h1>
+        <div class="section__content">
           <news-section></news-section>
         </div>
       </div>
 
       <div id="lineup" class="section section--dark">
-        <div class="section__container">
+        <div class="section__content">
           <lineup-section></lineup-section>
         </div>
       </div>
 
       <div id="merch" class="section">
-        <div class="section__container">
+        <h1 class="section__title">MERCH</h1>
+        <div class="section__content section--no-padding">
           <merch-section></merch-section>
         </div>
       </div>
       
       <div id="maps" class="section section--dark">
-        <div class="section__container">
-          <h1 class="section__title">Find Us</h1>
+        <h1 class="section__title">Find Us</h1>
+        <div class="section__content section--no-padding">
           <map-section></map-section>
         </div>
       </div>
 
       <!-- <div id="sponsor" class="section">
-        <div class="section__container">
+        <div class="section__content">
           <h1 class="section__title">Sponsor</h1>
           <sponsor-section></sponsor-section>
         </div>
       </div> -->
 
       <div id="maps" class="section">
-        <div class="section__container">
-          <h1 class="section__title">Contact us</h1>
+        <h1 class="section__title">Contact us</h1>
+        <div class="section__content ">
           <contact-section></contact-section>
         </div>
       </div>
@@ -90,25 +95,19 @@ class HomeView extends LitElement {
   }
 
   firstUpdated() {
-    window.scrollTo(0, 0);
-		// this.initApp();
-
-    console.log(this.showOverlay);
+    var window = document.querySelector('html');
+    window.scrollTop = 0;
   }
 
-  blockScroll(newValue) {
-    // console.log(newValue);
-    if (this.showOverlay === true) {
-        document.querySelector('html').style.overflowY = 'hidden';
-    } else {
-        document.querySelector('html').style.overflowY = 'auto';
-    }
+  onAfterEnter(location) {
+    var window = document.querySelector('html');
+    window.scrollTop = 0;
   }
 }
 
 const mapStateToProps = (state) => {
 	return {
-		showOverlay: selectors.getShowOverlay(state)
+		showOverlay: selectors.getShowOverlay(state),
 	};
 };
 

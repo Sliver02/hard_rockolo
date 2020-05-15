@@ -5,7 +5,7 @@ import connect from "../../store/connect";
 import actions from "../../store/actions";
 
 import '../components/news-card';
-import style from "../../styles/main.scss";
+import style from "../../styles/components/news.scss";
 
 class NewsSection extends LitElement {
 
@@ -29,7 +29,7 @@ class NewsSection extends LitElement {
           
     render() {
         return html`
-            <div class="section__news">
+            <div class="news-container">
                 ${this.news.map((article, index) => html `
                     <news-card 
                         img="${article.img}" 

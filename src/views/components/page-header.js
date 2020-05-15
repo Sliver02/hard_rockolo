@@ -14,20 +14,25 @@ class PageHeader extends LitElement {
         return {
             video: String,
             img: String,
-            title: String,
+            banner: String,
             subtitle: String,
             height: Number,
+            scrollDown: Boolean,
         };
     }
 
     constructor() {
         super();
-        this.video = '';
-        this.img = '';
+        // this.video = '';
+        // this.img = '';
     }
    
     connectedCallback() {
         super.connectedCallback();
+    }
+
+    handleClick() {
+        this.scrollDownNow();
     }
 
     render() {
@@ -51,42 +56,40 @@ class PageHeader extends LitElement {
                         </video> 
                     `}
 
-                <div class="header__text">
+                <div class="header__content">
                     <h1 class="header__title">
-                        ${this.title}
+                        ${this.banner}
                     </h1>
                     <p class="header__subtitle">
                         ${this.subtitle}
                     </p>
                 </div>
                 
+
+                ${this.scrollDown != undefined ?
+                    html`
+                        <i class="scroll-down icon fa-chevron-down" @click="${this.handleClick}"></i>
+                    `
+                    : html``            
+                }
+               
             </div>
         `;
     }
 
     firstUpdated() {
-        // this.parallaxEffect();
+
 
     }
 
-    // parallaxEffect() {
-    //     const header = this.querySelector('.header');
-        
-    //     const image = header.querySelector('.header__image');
-    //     const vid = header.querySelector('video');
-    
-    //     new simpleParallax(image, {
-    //         scale: 1.2
-    //     });
-    
-    //     new simpleParallax(vid, {
-    //         scale: 1.2
-    //     });
+    scrollDownNow() {
+        console.log('coglione');
+        // document.querySelector('html').scrollTop = 100;
+        var window = document.querySelector('html');
+        var news = window.querySelector('home-view').shadowRoot.querySelector('#news');
 
-    //     console.log('parallax');
-    // }
-
-    
+        news.scrollIntoView();
+    }
 
 }
 

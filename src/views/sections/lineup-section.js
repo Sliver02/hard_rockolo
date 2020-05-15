@@ -39,15 +39,15 @@ class LineupSection extends LitElement {
 
             <style>
                 .lineup__tag.is-next::before {
-                    -webkit-animation: load ${this.nextTimer}s linear; /* Safari 4+ */
-                    -moz-animation:    load ${this.nextTimer}s linear; /* Fx 5+ */
-                    -o-animation:      load ${this.nextTimer}s linear; /* Opera 12+ */
-                    animation:         load ${this.nextTimer}s linear; /* IE 10+, Fx 29+ */
+                    -webkit-animation: loadbar ${this.nextTimer}s linear; /* Safari 4+ */
+                    -moz-animation:    loadbar ${this.nextTimer}s linear; /* Fx 5+ */
+                    -o-animation:      loadbar ${this.nextTimer}s linear; /* Opera 12+ */
+                    animation:         loadbar ${this.nextTimer}s linear; /* IE 10+, Fx 29+ */
                 }
             </style>
 
             <div class="lineup__bands">
-                <h1 class="section__title">Line Up</h1>
+                <h1 class="lineup__title">Line Up</h1>
             
                 <ul class="lineup__tag-list">
                     ${this.lineup.map((band, index, arr) => html `

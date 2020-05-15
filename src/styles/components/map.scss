@@ -6,12 +6,13 @@
     flex-direction: column;
 
     .map {
-        height: 600px;
+        height: 400px;
         // position: relative;
 
         &__info {
             display: flex;
             margin-top: 60px;
+            padding: 0 20px;
 
             a {
                 &:hover {

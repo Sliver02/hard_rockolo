@@ -20,8 +20,7 @@ class TimelineView extends LitElement {
   }
 
   constructor() {
-      super();
-
+    super();
   }
   
   render() {
@@ -53,7 +52,7 @@ class TimelineView extends LitElement {
   }
 
   firstUpdated() {
-    window.scrollTo(0, 0);
+    
   }
 }
 

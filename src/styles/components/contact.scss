@@ -5,13 +5,13 @@
     flex-direction: column;
     justify-content: center;
 
-    max-width: 80%;
-    // max-width: 800px;
+    width: 100%;
+    max-width: 1200px;
     
     label {
         display: block;
         margin-bottom: 5px;
-        font-size: 1.1rem;
+        font-size: 0.9rem;
         text-transform: uppercase;
         color: rgba($color: $dark-gray, $alpha: 0.5);
     }

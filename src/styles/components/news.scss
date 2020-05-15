@@ -1,0 +1,8 @@
+@import '../main';
+ 
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    // grid-auto-rows: 300px;
+    grid-gap: 1rem;
+}

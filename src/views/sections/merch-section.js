@@ -2,7 +2,7 @@ import { LitElement, html, css } from 'lit-element/';
 
 import '../components/merch-slider';
 
-import style from "../../styles/main.scss";
+import style from "../../styles/components/merch.scss";
 
 class MerchSection extends LitElement {
 
@@ -22,11 +22,9 @@ class MerchSection extends LitElement {
           
     render() {
         return html`
-            <div class="section__merch">
+            <div class="merch-container">
                 <merch-slider></merch-slider>
-                <div class="section__text"> 
-                    <h1 class="section__title">MERCH</h1>
-
+                <div class="merch-container__text"> 
                     Merchandise originale marchiato <strong>Hard Rockolo!</strong> <br><br> 
                     Poster, magliette e gadget con design creativi e ricercati. <br><br>
                     La selezione viene aggiornata ad ogni edizione catturandone lo spirito, per regalarvi <strong>un ricordo del festival piú potente delle Dolomiti!</strong> <br><br>

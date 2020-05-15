@@ -23,48 +23,68 @@ class AboutView extends LitElement {
 
   }
 
+  updated(oldValue) {
+    this.blockScroll();
+  }
+
   handleClick() {
     this.toggleMenu();
   }
   
   render() {
     return html`
-      <i class="burger-menu icon fa-book-navigation" @click="${this.handleClick}"></i>
       
+      
+    <div class="navbar">
+    
+      <div class="navbar__logo">
+        <a href="/">
+          <img src="./assets/images/logo.png" alt="">
+        </a>
+      </div>
+
+      <i class="burger-menu icon fa-book-navigation" @click="${this.handleClick}"></i>
+
       ${this.showMenu ? html`
-        <nav class="navbar">
-
-          <div class="navbar__logo">
-            <a href="/">
-            <img src="./assets/images/logo.png" alt="">
-            </a>
-          </div>
-
-          <div class="navbar__nav">
-            <a class="navbar__btn" href="/" @click="${this.handleClick}">Home</a>
-            <a class="navbar__btn" href="/about" @click="${this.handleClick}">About</a>
-            <!-- <a class="navbar__btn" href="/merch">Merch</a> -->
-            <a class="navbar__btn" href="/timeline" @click="${this.handleClick}">Timeline</a>
-          </div>
-        </nav>
+        <div class="navbar__nav">
+          <a class="navbar__btn" href="/" @click="${this.handleClick}">Home</a>
+          <a class="navbar__btn" href="/about" @click="${this.handleClick}">About</a>
+          <!-- <a class="navbar__btn" href="/merch">Merch</a> -->
+          <a class="navbar__btn" href="/timeline" @click="${this.handleClick}">Timeline</a>
+        </div>
       ` : html``}
+
+    </div>
     `;
   }
 
   firstUpdated() {
-    // window.onscroll = () => {
-    //   // console.log(window.pageYOffset); 
-    //   scrollY = window.pageYOffset;
-    //   const nav = this.shadowRoot.querySelector('nav');
-    //   if(scrollY <= 200) nav.className = 'navbar'; else nav.className = 'navbar--dark';
-    // };
+    window.onscroll = () => {
+      // console.log(window.pageYOffset); 
+      scrollY = window.pageYOffset;
+      const nav = this.shadowRoot.querySelector('.navbar');
+      if(scrollY >= 200) {
+        nav.classList.add('navbar--dark');
+      } else {
+        nav.classList.remove('navbar--dark');
+      } 
+    };
+  }
+
+  blockScroll() {
+    if (this.showMenu === true || this.showOverlay === true) {
+      document.querySelector('html').style.overflowY = 'hidden';
+    } else {
+      document.querySelector('html').style.overflowY = 'auto';
+    }
   }
   
 }
 
 const mapStateToProps = (state) => {
 	return {
-    showMenu: selectors.getShowMenu(state)
+		showOverlay: selectors.getShowOverlay(state),
+		showMenu: selectors.getShowMenu(state),
 	};
 };
 

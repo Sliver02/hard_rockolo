@@ -24,7 +24,7 @@ class ContactSection extends LitElement {
             <div class="contact">
                 <form class="contact__form" name="contact" action="POST" data-netlify="true" data-netlify-honeypot="bot-field">
 
-                    <div style="diplay: none;" hidden>
+                    <div style="display: none;" hidden>
                         <label>Don't fill this if u're human:  <input name="bot-field"> </label>
                     </div>
 

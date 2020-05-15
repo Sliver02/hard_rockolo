@@ -3,18 +3,20 @@
 :host {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 
     .lineup {
 
         &__bands {
-            width: 50%;
+            width: 100%;
             height: max-content;
+            margin-bottom: 40px;
         }
             &__tag-list {
                 display: flex;
                 flex-wrap: wrap;
                 
-                font-size: 1.2rem;
+                font-size: 0.9rem;
             }
                 &__tag {
                     display: flex;
@@ -61,8 +63,8 @@
             display: flex;
             position: relative;
             width: 100%;
-            min-height: 550px;
-            margin-left: 50px;
+            min-height: 250px;
+            // margin-left: 50px;
         }
             &__video {
                 position: absolute;

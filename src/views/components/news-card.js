@@ -26,22 +26,22 @@ class NewsCard extends LitElement {
           
     render() {
         return html`            
-            <div class="news">
+            <div class="news-card">
                 ${ this.img === '' ? html`` : html`
-                    <div class="news__img-wrap">
-                        <div class="news__img">
+                    <div class="news-card__img-wrap">
+                        <div class="news-card__img">
                             <img src="./assets/images/news/${this.img}.jpg"/>
                         </div>
                     </div>
                 `} 
 
-                <h2 class="news__title">
+                <h2 class="news-card__title">
                     ${this.title}
                 </h2>
 
             </div>
 
-            <div class="news__desc">
+            <div class="news-card__desc">
                 ${this.desc}
             </div>
         `;
