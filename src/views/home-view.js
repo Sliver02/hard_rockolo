@@ -35,6 +35,7 @@ class HomeView extends LitElement {
   }
 
   updated(oldValue) {
+    this.blockScroll();
   }
   
   render() {
@@ -100,9 +101,12 @@ class HomeView extends LitElement {
     window.scrollTop = 0;
   }
 
-  onAfterEnter(location) {
-    var window = document.querySelector('html');
-    window.scrollTop = 0;
+  blockScroll() {
+    if (this.showOverlay === true) {
+      document.querySelector('html').style.overflowY = 'hidden';
+    } else {
+      document.querySelector('html').style.overflowY = 'auto';
+    }
   }
 }
 

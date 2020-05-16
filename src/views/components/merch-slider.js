@@ -120,7 +120,6 @@ class MerchSlider extends LitElement {
 
     firstUpdated() {
         this.startSlide(4);
-        console.log(this.tshirts);
     }
 
     startSlide(newTime) {
@@ -132,7 +131,6 @@ class MerchSlider extends LitElement {
                 this.updatePrev();
                 this.imgIndex += 1;
             } else {
-                // console.log('band reset');
                 this.updatePrev();
                 this.imgIndex = 0;
             }
@@ -149,7 +147,6 @@ class MerchSlider extends LitElement {
     }
 
     prevSlide() {
-        // console.log('prev');
         if (this.imgIndex > 0) {
             this.updatePrev();
             this.imgIndex -= 1;
@@ -160,7 +157,6 @@ class MerchSlider extends LitElement {
     }
 
     nextSlide() {
-        // console.log('next');
         if (this.imgIndex < this.imgTotal) {
             this.updatePrev();
             this.imgIndex += 1;

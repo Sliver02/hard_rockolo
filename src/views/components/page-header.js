@@ -83,7 +83,6 @@ class PageHeader extends LitElement {
     }
 
     scrollDownNow() {
-        console.log('coglione');
         // document.querySelector('html').scrollTop = 100;
         var window = document.querySelector('html');
         var news = window.querySelector('home-view').shadowRoot.querySelector('#news');

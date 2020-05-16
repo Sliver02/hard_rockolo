@@ -67,7 +67,6 @@ class LineupSection extends LitElement {
 
     firstUpdated() {
         this.loadPlayer();
-        console.log(this.lineup);
     }
 
     startSlider() {

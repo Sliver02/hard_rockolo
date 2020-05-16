@@ -32,6 +32,7 @@ class TimelineView extends LitElement {
       </page-header>
 
       <div class="section">
+        <h1 class="section__title">Hard Rockolo Timeline</h1>
         <div class="timeline">
             <ul>
               ${this.editions.map( edition => html`

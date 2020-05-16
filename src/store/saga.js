@@ -15,7 +15,7 @@ function* watchInit() {
 
 function* watchChangedInit() {
     yield takeEvery(types.CHANGE_INIT, function* (){
-        yield console.log("ciao");
+        // yield console.log("ciao");
     });
 }
 export default function* (){

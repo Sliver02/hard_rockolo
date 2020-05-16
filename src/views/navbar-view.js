@@ -59,24 +59,27 @@ class AboutView extends LitElement {
   }
 
   firstUpdated() {
-    window.onscroll = () => {
-      // console.log(window.pageYOffset); 
-      scrollY = window.pageYOffset;
-      const nav = this.shadowRoot.querySelector('.navbar');
-      if(scrollY >= 200) {
-        nav.classList.add('navbar--dark');
-      } else {
-        nav.classList.remove('navbar--dark');
-      } 
-    };
+    this.reduceNavbar();
   }
 
   blockScroll() {
-    if (this.showMenu === true || this.showOverlay === true) {
+    if (this.showMenu === true) {
       document.querySelector('html').style.overflowY = 'hidden';
     } else {
       document.querySelector('html').style.overflowY = 'auto';
     }
+  }
+
+  reduceNavbar() {
+    window.onscroll = () => {
+      scrollY = window.pageYOffset;
+      const nav = this.shadowRoot.querySelector('.navbar');
+      if(scrollY >= 200) {
+        nav.classList.add('navbar--small');
+      } else {
+        nav.classList.remove('navbar--small');
+      } 
+    };
   }
   
 }
