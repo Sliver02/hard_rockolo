@@ -20,7 +20,7 @@
     &__close {
         cursor: pointer;
         position: absolute;
-        right: 70px;
+        right: 20px;
         top: 50px;
         font-size: 2.5rem;
 
@@ -34,8 +34,8 @@
     }
     
     &__container {
-        margin: 120px 50px;
         width: 100%;
+        padding: 60px 20px;
         max-width: 950px;
     }
 

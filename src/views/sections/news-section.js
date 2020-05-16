@@ -24,7 +24,7 @@ class NewsSection extends LitElement {
     }
 
     handleClick(articleID) {
-        this.toggleOverlay();
+        this.toggleOverlay('articleID');
     }
           
     render() {
