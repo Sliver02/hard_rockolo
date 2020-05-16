@@ -59,12 +59,13 @@ class OverlayView extends LitElement {
 
                 <div class="overlay__content">
                     ${this.description() == '' || this.description() === undefined ?
-                        html`
+                        html` 
+                        `
+                        : html`
                             <p class="overlay__desc">
                                 ${this.description()}
                             </p>
                         `
-                        : html``
                     }
 
                     ${this.variant === 'edition' ?
