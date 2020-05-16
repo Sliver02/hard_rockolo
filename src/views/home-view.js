@@ -15,7 +15,6 @@ import './sections/merch-section';
   import './components/merch-slider';
 import './sections/map-section';
 import './sections/contact-section';
-import './overaly-view';
 
 class HomeView extends LitElement {
 
@@ -25,7 +24,6 @@ class HomeView extends LitElement {
 
   static get properties() {
     return {
-      showOverlay: {type: Boolean}
     };
   }
 
@@ -33,15 +31,9 @@ class HomeView extends LitElement {
       super();
       
   }
-
-  updated(oldValue) {
-    this.blockScroll();
-  }
   
   render() {
     return html`
-
-      ${this.showOverlay ? html`<overlay-view></overlay-view>` : html``}
     
       <page-header 
         video="background"
@@ -49,7 +41,7 @@ class HomeView extends LitElement {
         banner="Hard Rockolo"
         subtitle="La musica che ami nel cuore delle Dolomiti"
         height="100"
-        scrollDown="true">
+        scrollDown>
       </page-header>
 
       <div id="news" class="section" >
@@ -100,19 +92,10 @@ class HomeView extends LitElement {
     var window = document.querySelector('html');
     window.scrollTop = 0;
   }
-
-  blockScroll() {
-    if (this.showOverlay === true) {
-      document.querySelector('html').style.overflowY = 'hidden';
-    } else {
-      document.querySelector('html').style.overflowY = 'auto';
-    }
-  }
 }
 
 const mapStateToProps = (state) => {
 	return {
-		showOverlay: selectors.getShowOverlay(state),
 	};
 };
 

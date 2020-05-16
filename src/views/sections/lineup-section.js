@@ -26,7 +26,7 @@ class LineupSection extends LitElement {
     
     constructor() {
         super();
-        this.year = '2019',
+        this.year = '2019';
         this.days = [];
         this.bandIndex = 0;
         this.nextTimer = 0;
@@ -168,10 +168,10 @@ const mapStateToProps = (state, ctx) => {
 	};
 };
 
-// const mapDispatchToEvents = dispatch => {
-// 	return {
-// 		initApp: () => dispatch(actions.initApp())
-// 	};
-// };
+const mapDispatchToEvents = dispatch => {
+	return {
+        
+	};
+};
 
 customElements.define('lineup-section',  connect(mapStateToProps)(LineupSection));

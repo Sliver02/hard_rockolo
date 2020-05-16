@@ -2,7 +2,7 @@ export default [
         {
             year: `2019`,
             stages: ['main', 'forte'],
-            days: ['16/08', '17/08'],
+            days: ['16', '17'],
             urlGallery: ``,
             desc: ``,
             lineup: [
@@ -75,7 +75,7 @@ export default [
         {
             year: `2018`,
             stages: ['main'],
-            days: ['17/08', '18/08'],
+            days: ['17', '18'],
             urlGallery: ``,
             desc: ``,
             lineup: [
@@ -148,7 +148,7 @@ export default [
         {
             year: `2017`,
             stages: ['main'],
-            days: ['26/08'],
+            days: ['26'],
             urlGallery: ``,
             desc: ``,
             lineup: [
@@ -205,7 +205,7 @@ export default [
         {
             year: `2015`,
             stages: ['main'],
-            days: ['29/08'],
+            days: ['29'],
             urlGallery: ``,
             desc: ``,
             lineup: [
@@ -262,7 +262,7 @@ export default [
         {
             year: `2014`,
             stages: ['main'],
-            days: ['30/08'],
+            days: ['30'],
             urlGallery: ``,
             desc: ``,
             lineup: [

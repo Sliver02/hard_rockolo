@@ -12,12 +12,12 @@ class PageHeader extends LitElement {
 
     static get properties() {
         return {
-            video: String,
-            img: String,
-            banner: String,
-            subtitle: String,
-            height: Number,
-            scrollDown: Boolean,
+            video: {type: String},
+            img: {type: String},
+            banner: {type: String},
+            subtitle: {type: String},
+            height: {type: Number},
+            scrollDown: {type: Boolean},
         };
     }
 
@@ -66,7 +66,7 @@ class PageHeader extends LitElement {
                 </div>
                 
 
-                ${this.scrollDown != undefined ?
+                ${this.scrollDown ?
                     html`
                         <i class="scroll-down icon fa-chevron-down" @click="${this.handleClick}"></i>
                     `

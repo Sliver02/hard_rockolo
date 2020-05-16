@@ -7,7 +7,8 @@ import sponsor from "./sponsor";
 const INITIAL_STATE = {
     init: {
         initApp: false,
-        currentArticleID: 3,
+        // currentArticleID: 0,
+        // currentEditionID: 0,
         showOverlay: false,
         showMenu: false,
     },
@@ -29,15 +30,25 @@ export default (state = INITIAL_STATE, action) => {
             };
         }
         
-        case types.SWITCH_ARTICLE: {
-            return {
-                ...state,
-                init: {
-                    ...state.init,
-                    currentArticleID: action.payload,
-                }
-            };
-        }
+        // case types.SWITCH_ARTICLE: {
+        //     return {
+        //         ...state,
+        //         init: {
+        //             ...state.init,
+        //             currentArticleID: action.payload,
+        //         },
+        //     };
+        // }
+
+        // case types.SWITCH_EDITION: {
+        //     return {
+        //         ...state,
+        //         init: {
+        //             ...state.init,
+        //             currentEditionID: action.payload,
+        //         },
+        //     };
+        // }
 
         case types.TOGGLE_OVERLAY: {
             return {
