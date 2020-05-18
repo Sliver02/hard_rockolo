@@ -28,7 +28,9 @@ class AboutView extends LitElement {
   }
 
   handleClick() {
-    this.toggleMenu();
+    if (window.innerWidth <= 899) {
+      this.toggleMenu();
+    }
   }
   
   render() {
@@ -45,14 +47,13 @@ class AboutView extends LitElement {
 
       <i class="burger-menu icon fa-book-navigation" @click="${this.handleClick}"></i>
 
-      ${this.showMenu ? html`
-        <div class="navbar__nav">
+      
+        <div class="navbar__nav ${this.showMenu ? 'is-active' : ''}">
           <a class="navbar__btn" href="/" @click="${this.handleClick}">Home</a>
           <a class="navbar__btn" href="/about" @click="${this.handleClick}">About</a>
           <!-- <a class="navbar__btn" href="/merch">Merch</a> -->
           <a class="navbar__btn" href="/timeline" @click="${this.handleClick}">Timeline</a>
         </div>
-      ` : html``}
 
     </div>
     `;
@@ -63,7 +64,7 @@ class AboutView extends LitElement {
   }
 
   blockScroll() {
-    if (this.showMenu === true) {
+    if (window.innerWidth <= 899 && this.showMenu === true) {
       document.querySelector('html').style.overflowY = 'hidden';
     } else {
       document.querySelector('html').style.overflowY = 'auto';

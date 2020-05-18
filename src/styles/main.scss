@@ -1,5 +1,5 @@
-@import 'mixins';
 @import 'variables';
+@import 'mixins';
 @import 'animations';
 @import 'icons';
 
@@ -105,16 +105,41 @@ nav {
     padding: 80px 0;
     // padding-bottom: 100px;
 
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include for-tablet-portrait-up {
+            width: 100%;
+            max-width: 1400px;
+        }
+
+        @include for-desktop-up {
+            padding: 0 20px;
+        }
+    }
+
     &__title {
         width: 100%;
         align-self: left;
         padding: 0 20px;
+        align-self: flex-start;
+        max-width: 1400px;
+
+        @include for-desktop-up {
+            padding: 0;
+        }
     }
 
     &__content {
         width: 100%;
         max-width: 1400px;
         padding: 0 20px;
+
+        @include for-desktop-up {
+            padding: 0;
+        }
     }
         &--dark {
             background: $dark-gray;
@@ -124,6 +149,19 @@ nav {
 
 .--no-padding {
     padding: 0;
+}
+
+.--display-tablet-down {
+    @include for-tablet-landscape-up {
+        display: none;
+    }
+}
+
+.--display-tablet-up {
+    display: none;
+    @include for-tablet-landscape-up {
+        display: block;
+    }
 }
 
 // @import 'mobile';

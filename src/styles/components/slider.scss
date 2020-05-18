@@ -5,7 +5,7 @@
     flex-direction: column;
     position: relative;
     // max-width: 50%;
-    width: 800px;
+    width: 100%;
 
     .slider {
         @include flex-center();
@@ -13,6 +13,18 @@
         width: 100%;
         height: 400px;
         overflow: hidden;
+
+        @include for-tablet-portrait-up {
+            height: 600px;
+        }
+
+        @include for-tablet-landscape-up {
+            height: 400px;
+        }
+
+        @include for-desktop-up {
+            height: 600px;
+        }
 
         &__slide {
             position: absolute;
@@ -44,7 +56,7 @@
                 @include flex-center();
                 // position: relative;
 
-                // max-width: 100%;
+                width: 100%;
                 // height: 100%;
                 overflow: hidden;
                 // top: -40%;

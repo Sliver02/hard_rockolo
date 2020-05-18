@@ -30,37 +30,39 @@ class AboutView extends LitElement {
 
       
       <div class="section">
-        <h1 class="section__title">About Us</h1>
-        
-        <div class="about">
-          <div class="about__img-wrap">
-            <div class="about__img">
-              <img src="./assets/images/header/DSC_0003.jpg"/>
+        <div class="section__container">
+          <h1 class="section__title">About Us</h1>
+          
+          <div class="about">
+            <div class="about__img-wrap">
+              <div class="about__img">
+                <img src="./assets/images/header/DSC_0003.jpg"/>
+              </div>
             </div>
-          </div>
-          <p class="about__desc">
-            Hard Rockolo è un festival musicale che prende vita a Pieve di Cadore, in un luogo magico situato in mezzo alle Dolomiti Bellunesi, patrimonio dell'Unesco. 
-            <br>
-            <br>
-            Il nostro obbiettivo è quello di portare della buona musica, vissuta nella maniera più autentica e genuina del festival, promuovendo gli artisti locali e regalando un'esperienza indeterminable a chi la ama.
-          </p>
+            <p class="about__desc">
+              Hard Rockolo è un festival musicale che prende vita a Pieve di Cadore, in un luogo magico situato in mezzo alle Dolomiti Bellunesi, patrimonio dell'Unesco. 
+              <br>
+              <br>
+              Il nostro obbiettivo è quello di portare della buona musica, vissuta nella maniera più autentica e genuina del festival, promuovendo gli artisti locali e regalando un'esperienza indeterminable a chi la ama.
+            </p>
 
-          <div class="about__img-wrap">
-            <div class="about__img">
-              <img src="./assets/images/header/cadore-212.jpg"/>
+            <div class="about__img-wrap">
+              <div class="about__img">
+                <img src="./assets/images/header/cadore-212.jpg"/>
+              </div>
             </div>
+            <p class="about__desc">
+              Hard Rockolo Festival, in collaborazione con la Pro Loco Tiziano, è realizzato interamente da giovani volontari, amanti della musica, e proprio per questo sa come regalarvi vere emozioni.
+              <br>
+              <br>
+              Unitevi a noi nel riaccendere le notti tra le Dolomiti, godetevi il panorama mozzafiato sul Lago centro Cadore e preparatevi a scatenarvi davanti al nostro Palco!
+            </p>
+
           </div>
-          <p class="about__desc">
-            Hard Rockolo Festival, in collaborazione con la Pro Loco Tiziano, è realizzato interamente da giovani volontari, amanti della musica, e proprio per questo sa come regalarvi vere emozioni.
-            <br>
-            <br>
-            Unitevi a noi nel riaccendere le notti tra le Dolomiti, godetevi il panorama mozzafiato sul Lago centro Cadore e preparatevi a scatenarvi davanti al nostro Palco!
-          </p>
+
+          <iframe height="300" src="https://www.youtube.com/embed/_ZayLGaoXFY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
         </div>
-
-        <iframe height="300" src="https://www.youtube.com/embed/_ZayLGaoXFY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
       </div>
 
     `;

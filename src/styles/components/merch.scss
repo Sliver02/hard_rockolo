@@ -2,16 +2,33 @@
 
 .merch-container {
     display: flex;
-    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
+
+    @include for-tablet-landscape-up {
+        flex-direction: row;
+    }
 
     .merch-container__text {
 
         // padding-left: 60px;
         // max-width: 550px;
-        padding: 20px 20px;
+        margin: 20px;
+
+        @include for-tablet-landscape-up {
+            flex-direction: row;
+            margin: 0 40px;
+            width: 55%;
+
+            .section__title {
+                padding: 0;
+            }
+        }
 
         a {
             color: $dark-terracotta;
         }
     }
+
+    
 }

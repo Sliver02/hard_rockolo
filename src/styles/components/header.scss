@@ -24,6 +24,11 @@
     
         opacity: 0.8;
         // top: 0;
+
+        @include for-big-desktop-up {
+            width: 600px;
+            height: auto;
+        }
     }
 
     &__img {
@@ -41,6 +46,10 @@
         position: absolute;
         top: 40%;
         width: 90%;
+
+        @include for-tablet-portrait-up {
+            width: 600px;
+        }
     }
         &__title {
             font-family: 'Montserrat', sans-serif;
@@ -52,12 +61,19 @@
             line-height: 0.8;
             letter-spacing: -0.5rem;
             margin: 10px;
+
+            @include for-tablet-landscape-up {
+                font-size: 6rem;
+            }
         }
     
         &__subtitle {
             line-height: 2;
-            font-size: 1rem;
             letter-spacing: 0.2rem;
+
+            @include for-tablet-portrait-up {
+                font-size: 1.2rem;
+            }
         }
 
     .scroll-down {
@@ -75,5 +91,9 @@
         // &:hover {
         //     animation-play-state: running; 
         // }
+
+        @include for-tablet-landscape-up {
+            font-size: 4.2rem;
+        }
     }
 }

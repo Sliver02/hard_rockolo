@@ -45,30 +45,38 @@ class HomeView extends LitElement {
       </page-header>
 
       <div id="news" class="section" >
-        <h1 class="section__title">News</h1>
-        <div class="section__content">
-          <news-section></news-section>
+        <div class='section__container'>
+          <h1 class="section__title">News</h1>
+          <div class="section__content">
+            <news-section></news-section>
+          </div>
         </div>
       </div>
 
       <div id="lineup" class="section section--dark">
-        <h1 class="section__title">Line Up</h1>
-        <div class="section__content --no-padding">
-          <lineup-section></lineup-section>
+        <div class='section__container'>
+          <h1 class="section__title --display-tablet-down">Line Up</h1>
+          <div class="section__content --no-padding">
+            <lineup-section></lineup-section>
+          </div>
         </div>
       </div>
 
       <div id="merch" class="section">
-        <h1 class="section__title">MERCH</h1>
-        <div class="section__content --no-padding">
-          <merch-section></merch-section>
+        <div class='section__container'>
+          <h1 class="section__title --display-tablet-down">MERCH</h1>
+          <div class="section__content --no-padding">
+            <merch-section></merch-section>
+          </div>
         </div>
       </div>
       
       <div id="maps" class="section section--dark">
-        <h1 class="section__title">Find Us</h1>
-        <div class="section__content --no-padding">
-          <map-section></map-section>
+        <div class='section__container'>
+          <h1 class="section__title">Find Us</h1>
+          <div class="section__content --no-padding">
+            <map-section></map-section>
+          </div>
         </div>
       </div>
 
@@ -80,9 +88,11 @@ class HomeView extends LitElement {
       </div> -->
 
       <div id="maps" class="section">
-        <h1 class="section__title">Contact us</h1>
-        <div class="section__content ">
-          <contact-section></contact-section>
+        <div class='section__container'>
+          <h1 class="section__title">Contact us</h1>
+          <div class="section__content ">
+            <contact-section></contact-section>
+          </div>
         </div>
       </div>
     `;

@@ -47,6 +47,7 @@ class LineupSection extends LitElement {
             </style>
 
             <div class="lineup__bands">            
+                <h1 class="section__title --display-tablet-up">Line up</h1>
                 <ul class="lineup__tag-list">
                     ${this.lineup.map((band, index, arr) => html `
                         <li class="lineup__tag 

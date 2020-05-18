@@ -47,20 +47,22 @@ class TimelineView extends LitElement {
       </page-header>
 
       <div class="section">
-        <h1 class="section__title">Hard Rockolo Timeline</h1>
-        <div class="timeline">
-            <ul>
-              ${this.editions.map( (edition, index) => html`
-                <li>
-                    <div class="timeline__year">
-                        <h1>${edition.year}</h1>
-                    </div>
-                    <div class="timeline__poster" @click="${() => this.handleClick(index)}">
-                        <img src="./assets/images/poster/poster_${edition.year}.jpg"/>
-                    </div>
-                </li>
-              `)}
-            </ul>
+        <div class="section__container">
+          <h1 class="section__title">Hard Rockolo Timeline</h1>
+          <div class="timeline">
+              <ul>
+                ${this.editions.map( (edition, index) => html`
+                  <li>
+                      <div class="timeline__year">
+                          <h1>${edition.year}</h1>
+                      </div>
+                      <div class="timeline__poster" @click="${() => this.handleClick(index)}">
+                          <img src="./assets/images/poster/poster_${edition.year}.jpg"/>
+                      </div>
+                  </li>
+                `)}
+              </ul>
+          </div>
         </div>
       </div>
 

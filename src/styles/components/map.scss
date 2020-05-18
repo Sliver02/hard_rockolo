@@ -9,10 +9,18 @@
         height: 400px;
         // position: relative;
 
+        @include for-desktop-up {
+            height: 600px;
+        }
+
         &__info {
             display: flex;
             margin-top: 60px;
             padding: 0 20px;
+
+            @include for-desktop-up {
+                padding: 0;
+            }
 
             a {
                 &:hover {
