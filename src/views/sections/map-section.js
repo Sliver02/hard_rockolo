@@ -40,7 +40,7 @@ class MapSection extends LitElement {
                 {
                     'type': 'Feature',
                     'properties': {
-                        'infobox': true,
+                        'infobox': false,
                         'img': '',
                         'description': '',
                         'iconSize': [50, 50]
@@ -53,7 +53,7 @@ class MapSection extends LitElement {
                 {
                     'type': 'Feature',
                     'properties': {
-                        'infobox': true,
+                        'infobox': false,
                         'img': '',
                         'description': '',
                         'iconSize': [80, 80]
