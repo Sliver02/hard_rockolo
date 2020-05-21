@@ -4,162 +4,213 @@
     @include flex-center();
     flex-direction: column;
     position: relative;
-    // max-width: 50%;
-    width: 100%;
+}
 
-    .slider {
-        @include flex-center();
-        position: relative;
-        width: 100%;
+.slider {
+    // @include flex-center();
+    position: relative;
+    width: 100vw;
+    height: 400px;
+    overflow: hidden;
+
+    @include for-tablet-portrait-up {
+        height: 600px;
+    }
+
+    @include for-tablet-landscape-up {
+        width: 60vw;
         height: 400px;
-        overflow: hidden;
+    }
 
-        @include for-tablet-portrait-up {
-            height: 600px;
-        }
+    @include for-desktop-up {
+        max-width: 800px;
+        height: 600px;
+    }
 
-        @include for-tablet-landscape-up {
-            height: 400px;
-        }
 
-        @include for-desktop-up {
-            height: 600px;
-        }
 
-        &__slide {
-            position: absolute;
+    &__slide {
+        // position: absolute;
+        // width: 100%;
+        // height: 100%;
+        // // transform: rotate(45grad);
+        // overflow: hidden;
+        // display: flex;
+        // z-index: 1;
+
+        // transition: transform 1s;
+        // // transform: rotate(45grad) translate(0);
+
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform: translateX(100%);
+        z-index: 1;
+    }
+
+        .is-prev {
+            // z-index: 3;
+
+            transform: translate(0);
+            z-index: 2;
             width: 100%;
-            height: 100%;
-            // transform: rotate(45grad);
+        }
+
+        .is-active {
+            // z-index: 2;
+            // // transition: transform 0s;
+            // // transform: rotate(45grad) translate(0); 
+
+            transform: translate(0);
+            z-index: 3;
+        }
+
+        &__mask {
+            // // transform: rotate(-45grad);
+            // transition: transform 1s;
+            // position: absolute;
+
+            // @include flex-center();
+            // // position: relative;
+
+            // overflow: hidden;
+            // // top: -40%;
+            // align-self: center;
+            
             overflow: hidden;
+            width: 0;
+            height: 100%;  
+            transition: width .8s ease-in;
+
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
+
+            &.is-next {
+                width: 100%;
+            }
+            
+            &.is-active {
+                width: 100%;
+            }
+        }
+        
+
+        &__img-wrap {
+            // position: absolute;
+            // width: 100%;
+            // // height: 100%;
+
             display: flex;
-            z-index: 1;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
 
-            transition: transform 1s;
-            // transform: rotate(45grad) translate(0);
+            width: 100vw;
+            height: 100%;
+        
+            @include for-tablet-landscape-up {
+                width: 60vw;
+            }
+        
+            @include for-desktop-up {
+                max-width: 800px;
+            }
 
-           &.is-prev {
-                z-index: 2;
-                // transition: transform 0s;
-                // transform: rotate(45grad) translate(0); 
+            img {
+                // width: auto;
+                min-width: 100%;
+                min-height: 100%;
+                position: absolute;
+            }
+        }
+
+    &__btn {
+        @include flex-center();
+
+        cursor: pointer;
+        position: absolute;
+        width: 60px;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.3s, color 0.2s;
+
+        font-size: 3rem;
+        color: white;
+
+        z-index: 5;
+
+        i {
+            opacity: 0.6;
+        }
+        
+        &--right {
+            right: 0;
+            background: linear-gradient(to right, rgba(0,0,0,0), rgba($color: $dark-gray, $alpha: 0.1));
+        }
+
+        &--left {
+            background: linear-gradient(to left, rgba(0,0,0,0), rgba($color: $dark-gray, $alpha: 0.1));
+            left: 0;
+        }
+
+        &:hover {
+            // transform: scale(1.2);
+            opacity: 1;
+        }
+
+        &:active {
+            color: $dark-terracotta;
+        }
+    }
+
+    &__point-wrap {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 0.5rem;
+
+        width: 100%;
+        max-width: 500px;
+        padding: 10px;
+    }
+        &__point {
+            cursor: pointer;
+            position: relative;
+            width: 100%;
+            height: 30px;
+            // margin: 0.4rem;
+            background: rgba($color: $dark-gray, $alpha: 0.2);
+            // transition: background 0.3s;
+            overflow: hidden;
+            
+            border-radius: 0.2rem;
+
+            transition: transform 0.3s;
+            z-index: 4;
+
+            &:hover {
+                background: rgba($color: $dark-gray, $alpha: 0.3);
             }
 
             &.is-active {
-                z-index: 3;
-            }
-        }
-            &__img-wrap {
-                // transform: rotate(-45grad);
-                transition: transform 1s;
-                position: absolute;
-
-                @include flex-center();
-                // position: relative;
-
-                width: 100%;
-                // height: 100%;
-                overflow: hidden;
-                // top: -40%;
-                align-self: center;
+                background: $dark-terracotta;
             }
 
-            &__img {
-                // top: 0;
-                // left: 0;
-                // width: 100%;
-                // height: 100%;
+            &.is-next {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
 
-                width: 100%;
-                height: 100%;
-            }
-
-        &__btn {
-            @include flex-center();
-
-            cursor: pointer;
-            position: absolute;
-            width: 60px;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 0.3s, color 0.2s;
-
-            font-size: 3rem;
-            color: white;
-
-            z-index: 4;
-
-            i {
-                opacity: 0.6;
-            }
-            
-            &--right {
-                right: 0;
-                background: linear-gradient(to right, rgba(0,0,0,0), rgba($color: $dark-gray, $alpha: 0.1));
-            }
-
-            &--left {
-                background: linear-gradient(to left, rgba(0,0,0,0), rgba($color: $dark-gray, $alpha: 0.1));
-                left: 0;
-            }
-
-            &:hover {
-                // transform: scale(1.2);
-                opacity: 1;
-            }
-
-            &:active {
-                color: $dark-terracotta;
+                    width: 100%;
+                    height: 100%;
+                    transform: scaleX(0);
+                    transform-origin: 0 0;
+                    background: rgba($color: $dark-gray, $alpha: 0.1);
+                    // transition: transform 5s;
+                }
             }
         }
 
-        &__point-wrap {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-gap: 0.5rem;
-
-            width: 100%;
-            max-width: 500px;
-            padding: 10px;
-        }
-            &__point {
-                cursor: pointer;
-                position: relative;
-                width: 100%;
-                height: 30px;
-                // margin: 0.4rem;
-                background: rgba($color: $dark-gray, $alpha: 0.2);
-                // transition: background 0.3s;
-                overflow: hidden;
-                
-                border-radius: 0.2rem;
-
-                transition: transform 0.3s;
-                z-index: 4;
-
-                &:hover {
-                    background: rgba($color: $dark-gray, $alpha: 0.3);
-                }
-
-                &.is-active {
-                    background: $dark-terracotta;
-                }
-
-                &.is-next {
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-    
-                        width: 100%;
-                        height: 100%;
-                        transform: scaleX(0);
-                        transform-origin: 0 0;
-                        background: rgba($color: $dark-gray, $alpha: 0.1);
-                        // transition: transform 5s;
-                    }
-                }
-            }
-    
-    }
 }

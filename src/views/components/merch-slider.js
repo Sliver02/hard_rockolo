@@ -45,10 +45,23 @@ class MerchSlider extends LitElement {
         this.timer = undefined;
         this.sliderPause = false;
     }
+
+    slidingHandler(index, arr) {
+        if (this.imgPrev === index) {
+            return 'is-prev';
+        }
+        else if (this.imgIndex === index) {
+            return 'is-active';
+        } else {
+            return '';
+        }
+        
+        
+    }
           
     render() {
         return html`
-
+<!-- 
             ${this.imgPrev < this.imgIndex || this.imgPrev === this.imgTotal && this.imgIndex === 0 ?
                 html`
                     <style>
@@ -72,7 +85,7 @@ class MerchSlider extends LitElement {
                         };
                     </style>
                 `
-            }
+            } -->
 
             
             <style>
@@ -86,13 +99,13 @@ class MerchSlider extends LitElement {
             
 
             <div class="slider">
-                ${ this.merch.map((product, index) => html `
-                    <div class="slider__slide 
-                        ${this.imgIndex === index ? 'is-active' : ''}
-                        ${this.imgPrev === index ? 'is-prev' : ''}">
+                ${ this.merch.map((product, index, arr) => html `
+                    <div class="slider__slide ${this.slidingHandler(index,arr)}">
 
-                        <div class="slider__img-wrap ">
-                            <img class="slider__img" src="./assets/images/merch/slider/slide_${product.url}.jpg" />
+                        <div class="slider__mask ${this.slidingHandler(index,arr)}">
+                            <div class="slider__img-wrap">
+                                <img src="./assets/images/merch/slider/slide_${product.url}.jpg" />
+                            </div>
                         </div>
                     </div>
                 `)}
@@ -109,8 +122,8 @@ class MerchSlider extends LitElement {
             
             <div class="slider__point-wrap">
                 ${ this.merch.map((product, index, arr) => html `
-                    <div class="slider__point ${this.imgIndex === index ? 'is-active' : ''}
-                        ${this.imgIndex + 1 === index || this.imgIndex + 1 === arr.length && index === 0 ? 'is-next' : ''}"
+                    <div class="slider__point  ${this.slidingHandler(index,arr)}
+                    ${this.imgIndex + 1 === index || this.imgIndex + 1 === arr.length && index === 0 ? 'is-next' : ''}"
                         @click="${(e) => this.selectSlide(index)}"></div>
                 `)}
             </div>
