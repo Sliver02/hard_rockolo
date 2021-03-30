@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/views/base-view.js","webpack:///./src/views/merch-view.js"],"names":["this","customElements","define","super","window","scrollTo"],"mappings":"4GAEO,MAAM,UAAiB,IAC1B,mBACI,OAAOA,M,WC+BfC,eAAeC,OAAO,aA7BtB,cAAwB,EAEtB,wBACE,MAAO,GAKT,cACIC,QAIJ,SACE,OAAO,GAAI;;;;;;;MAUb,eACEC,OAAOC,SAAS,EAAG","file":"merch.af4269a1.js","sourceRoot":""}

@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat:400,900|Raleway|Spartan&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body, input {
+    font-family: 'Spartan', sans-serif;
+    line-height: 1.4;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    
+    background: #ddd;
+}
+
+main {
+    min-height: 100vh;
+}
